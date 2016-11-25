@@ -185,17 +185,6 @@ endfunction
 " }}}
 
 
-" let g:lightline = {
-"       \ 'colorscheme': 'gruvbox',
-"       \ 'component': {
-"       \   'readonly': '%{&readonly?"":""}',
-"       \ },
-"       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-"       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
-"       \ }
-
-
-
 set laststatus=2
 if !has('gui_running')
 	set t_Co=256

@@ -1,0 +1,99 @@
+ncmpcpp_directory = ~/.config/ncmpcpp
+mpd_host = localhost
+mpd_port = 6600
+mpd_connection_timeout = 5
+mpd_music_dir = ~/Dropbox/Music
+mpd_crossfade_time = 5
+
+visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_in_stereo = yes
+visualizer_sample_multiplier = 1
+#visualizer_look = ●▮
+visualizer_type = spectrum
+
+song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
+song_library_format = {%n - }{%t}|{%f}
+alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+now_playing_prefix = $b$6    >>>$9
+now_playing_suffix = $/b
+browser_playlist_prefix = "$2playlist$9 "
+selected_item_prefix = $6
+selected_item_suffix = $9
+modified_item_prefix = $3> $9
+song_window_title_format = {%a - }{%t}|{%f}
+browser_sort_mode = name
+#browser_sort_format = {%a - }{%t}|{%f} {(%l)}
+
+song_columns_list_format = (25)[cyan]{ar} (45)[white]{t|f:Title} (20)[cyan]{b} (10f)[magenta]{l}
+
+execute_on_song_change = ""
+playlist_show_mpd_host = no
+playlist_show_remaining_time = no
+playlist_shorten_total_times = no
+playlist_separate_albums = no
+playlist_display_mode = columns
+browser_display_mode = classic
+search_engine_display_mode = classic
+playlist_editor_display_mode = classic
+discard_colors_if_item_is_selected = yes
+incremental_seeking = yes
+seek_time = 5
+volume_change_step = 2
+autocenter_mode = no
+centered_cursor = yes
+progressbar_look = ———
+progressbar_boldness = yes
+default_place_to_search_in = database
+user_interface = classic
+data_fetching_delay = yes
+media_library_primary_tag = genre
+default_find_mode = wrapped
+default_tag_editor_pattern = %n - %t
+
+header_visibility = yes
+#statusbar_visibility = yes
+#titles_visibility = yes
+#header_text_scrolling = yes
+#cyclic_scrolling = no
+#lines_scrolled = 2
+show_hidden_files_in_local_browser = no
+
+screen_switcher_mode = playlist, visualizer
+startup_screen = playlist
+#startup_slave_screen = "visualizer"
+#
+#startup_slave_screen_focus = no
+ask_before_clearing_playlists = no
+clock_display_seconds = yes
+#display_remaining_time = no
+ignore_leading_the = yes
+#block_search_constraints_change_if_items_found = yes
+mouse_support = no
+mouse_list_scroll_whole_page = yes
+empty_tag_marker = <empty>
+tags_separator = " | "
+tag_editor_extended_numeration = yes
+media_library_sort_by_mtime = no
+enable_window_title = yes
+search_engine_default_search_mode = 1
+
+# Colors
+colors_enabled = yes
+empty_tag_color = cyan
+header_window_color = white
+volume_color = cyan
+state_line_color = cyan
+state_flags_color = cyan
+main_window_color = cyan
+color1 = cyan
+color2 = magenta
+main_window_highlight_color = cyan
+progressbar_color = black
+progressbar_elapsed_color = cyan
+statusbar_color = white
+alternative_ui_separator_color = cyan
+active_column_color = magenta
+#window_border_color = green
+active_window_border = magenta

@@ -1,0 +1,16 @@
+set guioptions i
+set recolor true
+set zoom-min 100
+set zoom-max 500
+unmap [fullscreen] a
+unmap [fullscreen] o
+unmap [fullscreen] e
+unmap [fullscreen] u
+map a toggle_fullscreen
+map [fullscreen] a toggle_fullscreen
+map e zoom in
+map o zoom out
+map [fullscreen] e zoom in
+map [fullscreen] o zoom out
+map [fullscreen] u navigate
+map [fullscreen] i toggle_statusbar

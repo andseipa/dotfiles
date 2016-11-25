@@ -17,7 +17,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-" Plug 'fmoralesc/vim-pad'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -25,8 +24,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'pangloss/vim-javascript'
-" Plug 'ervandew/supertab'
-" Plug 'terryma/vim-multiple-cursors'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'othree/html5.vim'
 Plug 'scrooloose/nerdtree'
@@ -79,7 +76,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set noexpandtab                             " tab chars don't expand to space
-" set smartindent
+set smartindent
 
 set autoread                                " refresh files when coming back
 set foldlevel=999
@@ -89,16 +86,10 @@ set modelines=5
 set path+=**
 set wildmenu
 
-
 filetype plugin on
 
 autocmd BufWinLeave *.vim mkview
 autocmd BufWinEnter *.vim silent loadview 
-
-" augroup vimrcconf
-" 	au BufWrite,VimLeave 'init.vim' mkview
-" 	au BufRead			'init.vim' silent loadview
-" augroup END
 
 " }}}
 " {{{	Plugin specific
@@ -184,7 +175,6 @@ endfunction
 
 " }}}
 
-
 set laststatus=2
 if !has('gui_running')
 	set t_Co=256
@@ -192,15 +182,10 @@ endif
 set noshowmode
 
 let g:pandoc#filetypes#pandoc_markdown = 1
-" let g:pandoc#command#autoexec_on_writes = 0
-" let g:pandoc#command#autoexec_command = "Pandoc pdf"
-" let g:pandoc#command#custom_open = "zathura"
 let g:pandoc#spell#enabled = 0
 let g:pandoc#formatting#mode = "ha"
 let g:pandoc#formatting#textwidth = 74
 let g:pandoc#folding#fdc = 0
-" let g:pandoc#syntax#conceal#blacklist = []
-
 
 " }}}
 " {{{	Keybinds

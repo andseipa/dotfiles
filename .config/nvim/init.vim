@@ -194,10 +194,6 @@ let g:pandoc#folding#fdc = 0
 let mapleader = "\<Space>"	
 let maplocalleader = ","
 
-
-" Easy tableize
-map <leader>q :Tableize
-
 " Easy access to notesdir, vimrc, etc
 map <leader>1 :CtrlP $NOTESDIR<CR>
 map <leader>2 :CtrlP $DEVDIR<CR>

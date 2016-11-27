@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrdb ~/.Xresources
+xrdb /home/andreas/.Xresources
 xrandr --dpi 192
 
 compton -b &

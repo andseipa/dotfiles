@@ -2,7 +2,8 @@
 
 # Font switcher ##########################
 # font = FuraMonoForPowerline Nerd Font 10
-	font = Monaco for Powerline 10
+# font = Monaco for Powerline 10
+	font = Roboto Mono for Powerline 10
 # font = Ubuntu Mono derivative Powerline 13
 # font = Roboto Mono for Powerline 10
 # font = Hack 10

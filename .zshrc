@@ -16,7 +16,8 @@ xrdb ~/.Xresources
 
 source "/home/andreas/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
-ZSH_THEME="odin"
+ZSH_THEME="geometry"
+
 ENABLE_CORRECTION="false"
 HIST_STAMPS="dd/mm.yyyy"
 

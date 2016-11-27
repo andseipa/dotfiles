@@ -7,16 +7,17 @@
 # Number of pixels to resize by in resize mode.
   set $resize     2
 
-  set $workspace1 "一"
-  set $workspace2 "二"
-  set $workspace3 "三"
-  set $workspace4 "四"
-  set $workspace5 "五"
-  set $workspace6 "六"
-  set $workspace7 "七"
-  set $workspace8 "八"
-  set $workspace9 "九"
-  set $workspace10 "十"
+
+set $workspace1 0 web
+set $workspace2 1 sh
+set $workspace3 2 app
+set $workspace4 3 mail
+set $workspace5 4 sh2
+set $workspace6 5 sh3
+set $workspace7 6 sh4
+set $workspace8 7 sh5
+set $workspace9 8 sh6
+set $workspace10 9 game
 
 
 # General Configuration
@@ -25,10 +26,10 @@
   #hide_edge_borders both
   #new_window none
   #smart_borders on
-  gaps inner 70
-  gaps outer 0
-  new_float	pixel 	4
-  new_window    pixel 	4
+  gaps inner 12
+  gaps outer 8
+  new_float	pixel 	2
+  new_window    pixel 	2
 
 # Window-Related Bindings
   bindsym $mod+x kill
@@ -108,12 +109,8 @@
   #workspace $workspace2 output $monitor2
 
 # Program Workspaces
-  assign [class="termite"] $workspace1
-  assign [class="urxvt"] $workspace1
-  assign [class="pcmanfm"] $workspace2
-  assign [class="google-chrome-stable"] $workspace3
-  assign [class="vivaldi-stable"] $workspace3
-  assign [class="atom"] $workspace4
+  assign [class="termite"] $workspace2
+  assign [class="chromium"] $workspace1
 
 # Floating
   #for_window [class="Lxappearance"] floating enable
@@ -125,30 +122,33 @@
    client.unfocused            		#928374 #928374 #ebdbb2 #C2CBFF
    client.urgent               		#F97EC6 #F97EC6 #ee0000 #F97EC6
 
+bar {
+  i3bar_command ~/.config/i3/lemonbar/i3_lemonbar.sh
+}
 
-#Bar  
-  bar {
-    strip_workspace_numbers no
-    position top
-    height 40
-    status_command lemonbar
-    # status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    separator_symbol "|"
-    tray_output none
-    font pango:Monaco 8
+# #Bar  
+#   bar {
+#     strip_workspace_numbers no
+#     position top
+#     height 40
+#     status_command lemonbar
+#     # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#     separator_symbol "|"
+#     tray_output none
+#     font pango:Monaco 8
 
 
-  colors {
-    background #282828
-    statusline #ebdbb2
-    separator #ffffff
-    						#border  	background 	text
-    focused_workspace 	#8ec07c	#3c3836 		#ebdbb2
-    active_workspace 		#928374 	#3c3836 		#ebdbb2
-    inactive_workspace 	#282828 	#282828 		#febdbb2
-    urgent_workspace 	#bf616a 	#F97EC6 		#febdbb2
-    }
-   }
+#   colors {
+#     background #282828
+#     statusline #ebdbb2
+#     separator #ffffff
+#     						#border  	background 	text
+#     focused_workspace 	#8ec07c	#3c3836 		#ebdbb2
+#     active_workspace 		#928374 	#3c3836 		#ebdbb2
+#     inactive_workspace 	#282828 	#282828 		#febdbb2
+#     urgent_workspace 	#bf616a 	#F97EC6 		#febdbb2
+#     }
+#    }
 
 exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1

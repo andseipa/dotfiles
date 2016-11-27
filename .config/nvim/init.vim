@@ -285,8 +285,6 @@ let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_termcolors = "256"
 set background=dark
 
-hi Normal ctermbg=none
-hi Normal guibg=none
 " Enable true color for neovim
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 

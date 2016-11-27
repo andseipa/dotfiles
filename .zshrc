@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
 export ZSH=/home/andreas/.oh-my-zsh
 export EDITOR=nvim
 export VISUAL=nvim
@@ -11,21 +10,14 @@ export PRESENDIR=/home/andreas/Dropbox/Presentations/
 export DEVDIR=/home/andreas/Dropbox/DEV/
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=2
-# export GDK_DPI_SCALE=0.5
+export GDK_DPI_SCALE=0.5
 
 xrdb ~/.Xresources
 
 source "/home/andreas/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 ZSH_THEME="odin"
-# ZSH_THEME="pure"
-
-# DISABLE_AUTO_TITLE="true"
-
 ENABLE_CORRECTION="false"
-
-# COMPLETION_WAITING_DOTS="true"
-
 HIST_STAMPS="dd/mm.yyyy"
 
 plugins=()

@@ -13,6 +13,8 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=2
 # export GDK_DPI_SCALE=0.5
 
+xrdb ~/.Xresources
+
 source "/home/andreas/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 ZSH_THEME="odin"
@@ -58,5 +60,6 @@ alias tmuxkill="tmux kill-server"
 alias vim="nvim" 
 alias zathura="zathura --fork"
 alias nmrestart="systemctl restart NetworkManager"
+alias tmux="tmux -2"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

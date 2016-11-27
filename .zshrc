@@ -55,3 +55,5 @@ alias nmrestart="systemctl restart NetworkManager"
 alias tmux="tmux -2"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # exec setxkbmap -layout no -variant dvorak -option caps:ctrl_modifier
+alias headloud="amixer -c 0 cset numid=10 0%"
+alias headquiet="amixer -c 0 cset numid=10 22%"

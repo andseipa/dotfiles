@@ -51,14 +51,14 @@
 
 # Window-Related Bindings
   bindsym $mod+x kill
-  bindsym $mod+Shift+h focus left
-  bindsym $mod+Shift+j focus down
-  bindsym $mod+Shift+k focus up
-  bindsym $mod+Shift+l focus right
-  bindsym $mod+h move left
-  bindsym $mod+j move down
-  bindsym $mod+k move up
-  bindsym $mod+l move right
+  bindsym $mod+h focus left
+  bindsym $mod+j focus down
+  bindsym $mod+k focus up
+  bindsym $mod+l focus right
+  bindsym $mod+Shift+h move left
+  bindsym $mod+Shift+j move down
+  bindsym $mod+Shift+k move up
+  bindsym $mod+Shift+l move right
   bindsym $mod+w floating toggle
   bindsym $mod+f fullscreen toggle
   #bindsym $mod+v layout toggle split
@@ -80,11 +80,7 @@
 
 # Program-Related Bindings
   bindsym $mod+space 	  exec termite
-  bindsym $mod+v          exec vivaldi-stable
-  bindsym $mod+g          exec google-chrome-stable
-  bindsym $mod+p          exec pcmanfm
-  bindsym $mod+a          exec atom
-  bindsym $mod+u          exec urxvt
+  bindsym $mod+g          exec chromium
 
   bindsym $mod+r exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300  -opacity "100" -bw 0 -bc "#80CBC4" -bg "#2a2337" -fg "$text-color" -hlbg "#80CBC4" -hlfg "#2a2337" -font "Noto Sans 18"
   bindsym --release Print exec imgur-screenshot
@@ -157,7 +153,7 @@
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     separator_symbol "|"
     tray_output none
-    font pango:Monaco 5
+    font pango:Monaco 8
 
 
   colors {
@@ -172,3 +168,5 @@
     }
    }
 
+exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1

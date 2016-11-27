@@ -62,4 +62,4 @@ alias zathura="zathura --fork"
 alias nmrestart="systemctl restart NetworkManager"
 alias tmux="tmux -2"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# exec setxkbmap -layout no -variant dvorak -option caps:ctrl_modifier

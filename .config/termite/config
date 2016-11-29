@@ -35,7 +35,7 @@
 
 [colors]
 # background = #1d2021
-	background = #282828
+background = #282828
 # background = rgba(40,40,40,0.9)
 # background = #32302f
 	foreground = #ebdbb2

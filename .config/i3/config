@@ -2,22 +2,46 @@
   set $mod Mod4
 
 # Window border multiplier.
-  set $borders    1
+  set $borders    10
 
 # Number of pixels to resize by in resize mode.
   set $resize     2
 
 
-set $workspace1 0 web
-set $workspace2 1 sh
-set $workspace3 2 app
-set $workspace4 3 mail
-set $workspace5 4 sh2
-set $workspace6 5 sh3
-set $workspace7 6 sh4
-set $workspace8 7 sh5
-set $workspace9 8 sh6
-set $workspace10 9 game
+# Hybrid colours
+
+set $back			#282828
+set $black			#1d2021
+set $grey			#928374
+set $lightgrey		#bdae93
+set $white			#ebdbb2
+set $yellow			#fabd2f
+set $red			#fb4934
+set $darkred		#cc241d
+set $green			#8ec07c
+set $darkgreen		#689d6a
+
+
+# Window colours:
+
+# class								border		backgr.		text		split
+   client.focused              		$green		$green		$white		$green
+   client.focused_inactive			$grey		$grey		$lightgrey	$grey
+   client.unfocused            		$grey		$grey		$lightgrey	$grey
+   client.urgent               		$red		$red		$black		$red
+
+
+
+set $workspace1 0
+set $workspace2 1
+set $workspace3 2
+set $workspace4 3
+set $workspace5 4
+set $workspace6 5
+set $workspace7 6
+set $workspace8 7
+set $workspace9 8
+set $workspace10 9
 
 
 # General Configuration
@@ -26,10 +50,10 @@ set $workspace10 9 game
   #hide_edge_borders both
   #new_window none
   #smart_borders on
-  gaps inner 12
-  gaps outer 8
+  gaps inner 58
+  gaps outer 10
   new_float	pixel 	2
-  new_window    pixel 	2
+  new_window pixel 	2
 
 # Window-Related Bindings
   bindsym $mod+x kill
@@ -43,7 +67,7 @@ set $workspace10 9 game
   bindsym $mod+Shift+l move right
   bindsym $mod+w floating toggle
   bindsym $mod+f fullscreen toggle
-  #bindsym $mod+v layout toggle split
+  bindsym $mod+v layout toggle split
   #bindsym $mod+h split h
   #bindsym $mod+space focus mode_toggle
 
@@ -61,28 +85,31 @@ set $workspace10 9 game
   bindsym $mod+Shift+r restart
 
 # Program-Related Bindings
-  bindsym $mod+space 	  exec termite
+  bindsym $mod+Return 	  exec termite
   bindsym $mod+g          exec chromium
 
-  bindsym $mod+r exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300  -opacity "100" -bw 0 -bc "#80CBC4" -bg "#2a2337" -fg "$text-color" -hlbg "#80CBC4" -hlfg "#2a2337" -font "Monaco 20"
-  bindsym --release Print exec imgur-screenshot
+  bindsym $mod+r exec rofi -show run
   bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 
 # Volume & Media Bindings
-  bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down
-  bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up
-  bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
-  bindsym XF86AudioPlay exec playerctl play-pause
-  bindsym XF86AudioPause exec playerctl pause
-  bindsym XF86AudioNext exec playerctl next
-  bindsym XF86AudioPrev exec playerctl previous
+  bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
+  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
+  bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
+  bindsym XF86AudioPlay exec mpc toggle
+  bindsym XF86AudioPause exec mpc pause
+  bindsym XF86AudioNext exec mpc next
+  bindsym XF86AudioPrev exec mpc prev
 
-# Startup Programs
-  exec --no-startup-id nm-applet
-  exec --no-startup-id ibus-daemon
-  #exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
+# Screenbrightness
+
+	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
+	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
+
+
+	# bindsym XF86MonBrightnessDown exec --no-startup-id brightdn
+	# bindsym XF86MonBrightnessUp exec --no-startup-id brightup
 
 # Workspace-Related Bindings
   bindsym $mod+1 workspace $workspace1
@@ -113,42 +140,34 @@ set $workspace10 9 game
   assign [class="chromium"] $workspace1
 
 # Floating
-  #for_window [class="Lxappearance"] floating enable
+  for_window [class="Lxappearance"] floating enable
 
-# Window colours:
+# bar {
+#   i3bar_command ~/.config/i3/lemonbar/i3_lemonbar.sh
+# }
 
-   client.focused              		#8ec07c #8ec07c #ebdbb2 #12fee7
-   client.focused_inactive     	#928374 #928374 #ebdbb2 #C2CBFF
-   client.unfocused            		#928374 #928374 #ebdbb2 #C2CBFF
-   client.urgent               		#F97EC6 #F97EC6 #ee0000 #F97EC6
-
-bar {
-  i3bar_command ~/.config/i3/lemonbar/i3_lemonbar.sh
-}
-
-# #Bar  
-#   bar {
-#     strip_workspace_numbers no
-#     position top
-#     height 40
-#     status_command lemonbar
-#     # status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#     separator_symbol "|"
-#     tray_output none
-#     font pango:Monaco 8
+#Bar  
+  bar {
+    strip_workspace_numbers yes
+    position top
+    height 44
+    # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    separator_symbol "|"
+    tray_output none
+    font pango:Monaco 14
 
 
-#   colors {
-#     background #282828
-#     statusline #ebdbb2
-#     separator #ffffff
-#     						#border  	background 	text
-#     focused_workspace 	#8ec07c	#3c3836 		#ebdbb2
-#     active_workspace 		#928374 	#3c3836 		#ebdbb2
-#     inactive_workspace 	#282828 	#282828 		#febdbb2
-#     urgent_workspace 	#bf616a 	#F97EC6 		#febdbb2
-#     }
-#    }
+  colors {
+    background $back
+    statusline $white
+    separator $white
+    						#border  	background		text
+    focused_workspace		$gray		$back			$white
+    active_workspace 		$gray		$back			$white
+    inactive_workspace		$gray		$back			$white
+    urgent_workspace		$gray		$back			$white
+    }
+   }
 
 exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1

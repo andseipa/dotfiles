@@ -33,3 +33,33 @@ Xft.rgba: rgb
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+/* Rofi */
+#define r_bg   #282828
+#define r_fg   #ebdbb2
+#define r_hlfg #8ec07c
+
+! States: bg, fg, bgalt, hlbg, hlfg
+rofi.color-enabled: true
+rofi.color-normal: r_bg,r_fg,#282828,r_bg,r_hlfg
+rofi.color-urgent: r_bg,#fb4934,#282828,r_bg,r_hlfg
+rofi.color-active: r_bg,r_fg,#282828,r_bg,#fe8019
+! states: background, border
+rofi.color-window: r_bg,#d5c4a1
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.bw: 0
+rofi.columns: 1
+rofi.hide-scrollbar: true
+/* rofi.eh: 150 */
+
+rofi.yoffset: 0
+rofi.opacity: 80
+rofi.fake-transparency: false
+rofi.location: 0
+rofi.width: 100
+rofi.fullscreen: true
+rofi.font: Noto Sans 40
+rofi.lines: 3
+rofi.padding: 700

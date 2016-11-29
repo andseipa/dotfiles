@@ -198,6 +198,8 @@ let maplocalleader = ","
 map <leader>1 :CtrlP $NOTESDIR<CR>
 map <leader>2 :CtrlP $DEVDIR<CR>
 map <leader>0 :e ~/.config/nvim/init.vim<CR>
+map <leader>9 :e ~/.config/i3/config<CR>
+map <leader>8 :e ~/.config/termite/config<CR>
 
 " Add ctrl-tab support
 noremap <S-tab> :tabnext<CR>

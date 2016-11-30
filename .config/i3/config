@@ -1,173 +1,207 @@
-# Constants
-  set $mod Mod4
+#
+#	.i3 config
+#				by Andreas Seipajarvi
+# ========================================
+#	Variables
+# ========================================
 
-# Window border multiplier.
-  set $borders    10
+	set $mod Mod4
+	set $borders    2
+	set $resize     2
 
-# Number of pixels to resize by in resize mode.
-  set $resize     2
+# ========================================
+#	Visuals 
+# ========================================
 
+# Env colors
+	set $back			#282828
+	set $black			#1d2021
+	set $grey			#928374
+	set $lightgrey		#bdae93
+	set $white			#ebdbb2
+	set $yellow			#fabd2f
+	set $red			#fb4934
+	set $darkred		#cc241d
+	set $green			#8ec07c
+	set $darkgreen		#689d6a
+	set $transp			#33333300
 
-# Hybrid colours
+# Window colors:
+# class									border		backgr.		text		split
+	client.focused              		$green		$green		$white		$green
+	client.focused_inactive				$grey		$grey		$lightgrey	$grey
+	client.unfocused            		$grey		$grey		$lightgrey	$grey
+	client.urgent               		$red		$red		$black		$red
 
-set $back			#282828
-set $black			#1d2021
-set $grey			#928374
-set $lightgrey		#bdae93
-set $white			#ebdbb2
-set $yellow			#fabd2f
-set $red			#fb4934
-set $darkred		#cc241d
-set $green			#8ec07c
-set $darkgreen		#689d6a
+# Workspace icons
+	set $workspace1 0
+	set $workspace2 1
+	set $workspace3 2
+	set $workspace4 3
+	set $workspace5 4
+	set $workspace6 5
+	set $workspace7 6
+	set $workspace8 7
+	set $workspace9 8
+	set $workspace10 9
 
-
-# Window colours:
-
-# class								border		backgr.		text		split
-   client.focused              		$green		$green		$white		$green
-   client.focused_inactive			$grey		$grey		$lightgrey	$grey
-   client.unfocused            		$grey		$grey		$lightgrey	$grey
-   client.urgent               		$red		$red		$black		$red
-
-
-
-set $workspace1 0
-set $workspace2 1
-set $workspace3 2
-set $workspace4 3
-set $workspace5 4
-set $workspace6 5
-set $workspace7 6
-set $workspace8 7
-set $workspace9 8
-set $workspace10 9
-
+	# set $workspace1 0
+	# set $workspace2 1
+	# set $workspace3 2
+	# set $workspace4 3
+	# set $workspace5 4
+	# set $workspace6 5
+	# set $workspace7 6
+	# set $workspace8 7
+	# set $workspace9 8
+	# set $workspace10 9
 
 # General Configuration
-  font pango:Monaco 10
-  floating_modifier $mod
-  #hide_edge_borders both
-  #new_window none
-  #smart_borders on
-  gaps inner 58
-  gaps outer 10
-  new_float	pixel 	2
-  new_window pixel 	2
+	font pango:Monaco 10
+	floating_modifier $mod
+#hide_edge_borders both
+#new_window none
+#smart_borders on
+	gaps inner 45
+	gaps outer 2
+	new_float	pixel 	0
+	new_window pixel 	0
 
 # Window-Related Bindings
-  bindsym $mod+x kill
-  bindsym $mod+h focus left
-  bindsym $mod+j focus down
-  bindsym $mod+k focus up
-  bindsym $mod+l focus right
-  bindsym $mod+Shift+h move left
-  bindsym $mod+Shift+j move down
-  bindsym $mod+Shift+k move up
-  bindsym $mod+Shift+l move right
-  bindsym $mod+w floating toggle
-  bindsym $mod+f fullscreen toggle
-  bindsym $mod+v layout toggle split
-  #bindsym $mod+h split h
-  #bindsym $mod+space focus mode_toggle
+	bindsym $mod+x kill
+	bindsym $mod+h focus left
+	bindsym $mod+j focus down
+	bindsym $mod+k focus up
+	bindsym $mod+l focus right
+	bindsym $mod+Shift+h move left
+	bindsym $mod+Shift+j move down
+	bindsym $mod+Shift+k move up
+	bindsym $mod+Shift+l move right
+	bindsym $mod+w floating toggle
+	bindsym $mod+u fullscreen toggle
+	bindsym $mod+v layout toggle split
+	bindsym $mod+space split h
+	bindsym $mod+a focus mode_toggle
+	# bindsym $mod+m bar mode toggle
 
-  #bindsym $mod+r mode "  "
-  #mode "  " {
-  #bindsym h resize shrink width 10 px or 10 ppt
-  #bindsym j resize grow height 10 px or 10 ppt
-  #bindsym k resize shrink height 10 px or 10 ppt
-  #bindsym l resize grow width 10 px or 10 ppt
-  #bindsym Escape mode "default"
-  #}
+# Resize mode
+	# bindsym $mod+, mode "  "
+	# mode "  " {
+	# bindsym h resize shrink width 10 px or 10 ppt
+	# bindsym j resize grow height 10 px or 10 ppt
+	# bindsym k resize shrink height 10 px or 10 ppt
+	# bindsym l resize grow width 10 px or 10 ppt
+	# bindsym Escape mode "default"
+	# }
 
 # Restart-Related Bindings
-  bindsym $mod+Shift+c reload
-  bindsym $mod+Shift+r restart
+	bindsym $mod+Shift+c reload
+	bindsym $mod+Shift+r restart
 
 # Program-Related Bindings
-  bindsym $mod+Return 	  exec termite
-  bindsym $mod+g          exec chromium
+	bindsym $mod+Return 	  exec termite
+	bindsym $mod+g          exec chromium
 
-  bindsym $mod+r exec rofi -show run
-  bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# Others
+	bindsym $mod+r exec rofi -show run
+	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 
 # Volume & Media Bindings
-  bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
-  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
-  bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
-  bindsym XF86AudioPlay exec mpc toggle
-  bindsym XF86AudioPause exec mpc pause
-  bindsym XF86AudioNext exec mpc next
-  bindsym XF86AudioPrev exec mpc prev
+	bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
+	bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
+	bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
+	bindsym XF86AudioPlay exec mpc toggle
+	bindsym XF86AudioPause exec mpc pause
+	bindsym XF86AudioNext exec mpc next
+	bindsym XF86AudioPrev exec mpc prev
 
 # Screenbrightness
 
-	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
-	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
+	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 3
+	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 3
 
-
-	# bindsym XF86MonBrightnessDown exec --no-startup-id brightdn
-	# bindsym XF86MonBrightnessUp exec --no-startup-id brightup
 
 # Workspace-Related Bindings
-  bindsym $mod+1 workspace $workspace1
-  bindsym $mod+2 workspace $workspace2
-  bindsym $mod+3 workspace $workspace3
-  bindsym $mod+4 workspace $workspace4
-  bindsym $mod+5 workspace $workspace5
+	bindsym $mod+1 workspace $workspace1
+	bindsym $mod+2 workspace $workspace2
+	bindsym $mod+3 workspace $workspace3
+	bindsym $mod+4 workspace $workspace4
+	bindsym $mod+5 workspace $workspace5
+	bindsym $mod+6 workspace $workspace6
+	bindsym $mod+7 workspace $workspace7
+	bindsym $mod+8 workspace $workspace8
+	bindsym $mod+9 workspace $workspace9
+	bindsym $mod+0 workspace $workspace10
 
   #bindsym $mod+. workspace next|prev|next_on_output|prev_on_output
 
-  bindsym $mod+Shift+1 move container to workspace $workspace1
-  bindsym $mod+Shift+2 move container to workspace $workspace2
-  bindsym $mod+Shift+3 move container to workspace $workspace3
-  bindsym $mod+Shift+4 move container to workspace $workspace4
-  bindsym $mod+Shift+5 move container to workspace $workspace5
-  bindsym $mod+Shift+6 move container to workspace $workspace6
-  bindsym $mod+Shift+7 move container to workspace $workspace7
-  bindsym $mod+Shift+8 move container to workspace $workspace8
-  bindsym $mod+Shift+9 move container to workspace $workspace9
-  bindsym $mod+Shift+0 move container to workspace $workspace10
+	bindsym $mod+Shift+1 move container to workspace $workspace1
+	bindsym $mod+Shift+2 move container to workspace $workspace2
+	bindsym $mod+Shift+3 move container to workspace $workspace3
+	bindsym $mod+Shift+4 move container to workspace $workspace4
+	bindsym $mod+Shift+5 move container to workspace $workspace5
+	bindsym $mod+Shift+6 move container to workspace $workspace6
+	bindsym $mod+Shift+7 move container to workspace $workspace7
+	bindsym $mod+Shift+8 move container to workspace $workspace8
+	bindsym $mod+Shift+9 move container to workspace $workspace9
+	bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # Workspace Monitors
   #workspace $workspace1 output $monitor1
   #workspace $workspace2 output $monitor2
 
 # Program Workspaces
-  assign [class="termite"] $workspace2
-  assign [class="chromium"] $workspace1
+	assign [class="chromium"] $workspace1
 
 # Floating
-  for_window [class="Lxappearance"] floating enable
+	for_window [class="Lxappearance"] floating enable
 
 # bar {
 #   i3bar_command ~/.config/i3/lemonbar/i3_lemonbar.sh
 # }
 
+bar {
+	position top
+	height 80
+	i3bar_command i3bar -t
+
+	colors {
+		background $transp
+		statusline $transp
+		separator $transp
+
+		focused_workspace		$transp		$transp			$transp
+		active_workspace 		$transp		$transp			$transp
+		inactive_workspace		$transp		$transp			$transp
+		urgent_workspace		$transp		$transp			$transp
+	}
+}
+
 #Bar  
-  bar {
-    strip_workspace_numbers yes
-    position top
-    height 44
-    # status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    separator_symbol "|"
-    tray_output none
-    font pango:Monaco 14
+	# bar {
+	# 	strip_workspace_numbers yes
+	# 	position top
+	# 	height 44
+# # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	# 	separator_symbol "|"
+	# 	tray_output none
+	# 	font pango:Monaco 12
 
 
-  colors {
-    background $back
-    statusline $white
-    separator $white
-    						#border  	background		text
-    focused_workspace		$gray		$back			$white
-    active_workspace 		$gray		$back			$white
-    inactive_workspace		$gray		$back			$white
-    urgent_workspace		$gray		$back			$white
-    }
-   }
+	# 	colors {
+	# 		background $back
+	# 		statusline $white
+	# 		separator $white
+	# 								#border  	background		text
+			# focused_workspace		$back		$back			$green
+			# active_workspace 		$back		$back			$lightgrey
+			# inactive_workspace		$back		$back			$lightgrey
+			# urgent_workspace		$back		$back			$red
+		# }
+	# }
 
-exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
-exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
+	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
+	exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
+	exec_always --no-startup-id $HOME/.config/polybar/launch.sh

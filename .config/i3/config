@@ -1,6 +1,7 @@
 #
 #	.i3 config
 #				by Andreas Seipajarvi
+#
 # ========================================
 #	Variables
 # ========================================
@@ -45,27 +46,20 @@
 	set $workspace9 8
 	set $workspace10 9
 
-	# set $workspace1 0
-	# set $workspace2 1
-	# set $workspace3 2
-	# set $workspace4 3
-	# set $workspace5 4
-	# set $workspace6 5
-	# set $workspace7 6
-	# set $workspace8 7
-	# set $workspace9 8
-	# set $workspace10 9
+# ========================================
+#	General configuration
+# ========================================
 
-# General Configuration
 	font pango:Monaco 10
 	floating_modifier $mod
-#hide_edge_borders both
-#new_window none
-#smart_borders on
-	gaps inner 45
-	gaps outer 2
-	new_float	pixel 	0
-	new_window pixel 	0
+	gaps inner 52
+	gaps outer 0
+	new_float	pixel 	2
+	new_window pixel 	2
+
+# ========================================
+#	Keybindings
+# ========================================
 
 # Window-Related Bindings
 	bindsym $mod+x kill
@@ -80,19 +74,18 @@
 	bindsym $mod+w floating toggle
 	bindsym $mod+u fullscreen toggle
 	bindsym $mod+v layout toggle split
-	bindsym $mod+space split h
+	bindsym $mod+t split h
 	bindsym $mod+a focus mode_toggle
-	# bindsym $mod+m bar mode toggle
 
 # Resize mode
-	# bindsym $mod+, mode "  "
-	# mode "  " {
-	# bindsym h resize shrink width 10 px or 10 ppt
-	# bindsym j resize grow height 10 px or 10 ppt
-	# bindsym k resize shrink height 10 px or 10 ppt
-	# bindsym l resize grow width 10 px or 10 ppt
-	# bindsym Escape mode "default"
-	# }
+	bindsym $mod+n mode "resize"
+	mode "resize" {
+	bindsym h resize shrink width 5 px or 5 ppt
+	bindsym j resize grow height 5 px or 5 ppt
+	bindsym k resize shrink height 5 px or 5 ppt
+	bindsym l resize grow width 5 px or 5 ppt
+	bindsym Escape mode "default"
+	}
 
 # Restart-Related Bindings
 	bindsym $mod+Shift+c reload
@@ -106,8 +99,6 @@
 	bindsym $mod+r exec rofi -show run
 	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-
-
 # Volume & Media Bindings
 	bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
 	bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
@@ -118,10 +109,8 @@
 	bindsym XF86AudioPrev exec mpc prev
 
 # Screenbrightness
-
 	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 3
 	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 3
-
 
 # Workspace-Related Bindings
 	bindsym $mod+1 workspace $workspace1
@@ -135,8 +124,7 @@
 	bindsym $mod+9 workspace $workspace9
 	bindsym $mod+0 workspace $workspace10
 
-  #bindsym $mod+. workspace next|prev|next_on_output|prev_on_output
-
+# Container move binds
 	bindsym $mod+Shift+1 move container to workspace $workspace1
 	bindsym $mod+Shift+2 move container to workspace $workspace2
 	bindsym $mod+Shift+3 move container to workspace $workspace3
@@ -148,60 +136,26 @@
 	bindsym $mod+Shift+9 move container to workspace $workspace9
 	bindsym $mod+Shift+0 move container to workspace $workspace10
 
-# Workspace Monitors
-  #workspace $workspace1 output $monitor1
-  #workspace $workspace2 output $monitor2
+# Easy workspace switch
+	bindsym $mod+Tab workspace back_and_forth
+
+# ========================================
+#	Application specific
+# ========================================
 
 # Program Workspaces
-	assign [class="chromium"] $workspace1
+	assign [class="Chromium"] $workspace1
+
+# Borders
+	for_window [class="Chromium"] border pixel 0
+	for_window [class="Nitrogen"] border pixel 0
 
 # Floating
 	for_window [class="Lxappearance"] floating enable
+	for_window [class="Nitrogen"] floating enable
 
-# bar {
-#   i3bar_command ~/.config/i3/lemonbar/i3_lemonbar.sh
-# }
-
-bar {
-	position top
-	height 80
-	i3bar_command i3bar -t
-
-	colors {
-		background $transp
-		statusline $transp
-		separator $transp
-
-		focused_workspace		$transp		$transp			$transp
-		active_workspace 		$transp		$transp			$transp
-		inactive_workspace		$transp		$transp			$transp
-		urgent_workspace		$transp		$transp			$transp
-	}
-}
-
-#Bar  
-	# bar {
-	# 	strip_workspace_numbers yes
-	# 	position top
-	# 	height 44
-# # status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	# 	separator_symbol "|"
-	# 	tray_output none
-	# 	font pango:Monaco 12
-
-
-	# 	colors {
-	# 		background $back
-	# 		statusline $white
-	# 		separator $white
-	# 								#border  	background		text
-			# focused_workspace		$back		$back			$green
-			# active_workspace 		$back		$back			$lightgrey
-			# inactive_workspace		$back		$back			$lightgrey
-			# urgent_workspace		$back		$back			$red
-		# }
-	# }
-
+# Autoexec
 	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 	exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
+	exec --no-startupid dropbox
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh

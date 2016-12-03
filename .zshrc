@@ -1,7 +1,10 @@
+# ========================================
+#	.zshrc
 #
-# .zshrc
 #				by Andreas Seipajarvi
-#
+# ========================================
+
+
 # ========================================
 #	Enviroment variables
 # ========================================
@@ -64,7 +67,7 @@ alias pstates="pstate-frequency -S -p powersave"
 alias cpup="cpupower frequency-info"
 
 
-# headphone boost
+# headphone
 alias headloud="amixer -c 0 cset numid=10 0%"
 alias headquiet="amixer -c 0 cset numid=10 22%"
 
@@ -78,9 +81,11 @@ alias tat="tmux a -t"
 alias tkill="tmux kill-session -t"
 
 # misc
+alias vpn="openvpn --config /etc/openvpn/Sweden.conf"
 alias mkill="mpd --kill"
 alias vim="nvim" 
 alias zathura="zathura --fork"
 alias nmrestart="systemctl restart NetworkManager"
 alias sudo="sudo "
 alias polyr=/home/andreas/.config/polybar/launch.sh
+alias dim='light -S 0.2'

@@ -1,14 +1,21 @@
-[options]
+# ========================================
+#	termite config
+#
+#				by Andreas Seipajarvi
+# ========================================
 
+[options]
 # Font switcher ##########################
-# font = FuraMonoForPowerline Nerd Font 10
+# font = FuraMonoForPowerline Nerd Font 9
+# font = Fira Mono for Powerline 10
 # font = Monaco for Powerline 10
-	font = Roboto Mono for Powerline 10
+# font = Roboto Mono for Powerline 10
+# font = FantasqueSansMono\-Regular.ttf+Powerline+Awesome 5
 # font = Ubuntu Mono derivative Powerline 13
 # font = Roboto Mono for Powerline 10
 # font = Hack 10
 # font = Anonymice Powerline 12
-# font = Sauce Code Powerline 10
+font = Sauce Code Powerline 11
 
 	scroll_on_output = false
 	scroll_on_keystroke = true

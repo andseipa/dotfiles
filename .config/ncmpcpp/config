@@ -54,7 +54,7 @@ default_tag_editor_pattern = %n - %t
 
 header_visibility = yes
 #statusbar_visibility = yes
-#titles_visibility = yes
+titles_visibility = no
 #header_text_scrolling = yes
 #cyclic_scrolling = no
 #lines_scrolled = 2

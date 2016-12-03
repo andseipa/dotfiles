@@ -200,6 +200,7 @@ map <leader>2 :CtrlP $DEVDIR<CR>
 map <leader>0 :e ~/.config/nvim/init.vim<CR>
 map <leader>9 :e ~/.config/i3/config<CR>
 map <leader>8 :e ~/.config/termite/config<CR>
+map <leader>7 :e ~/.config/polybar/config<CR>
 
 " Add ctrl-tab support
 noremap <S-tab> :tabnext<CR>
@@ -279,8 +280,9 @@ com W :w !sudo tee %
 set linespace=0
 " set guifont=FuraMonoForPowerline\ Nerd\ Font:h7
 " set guifont=Sauce\ Code\ Powerline:h10
+set guifont=Fira\ Mono\ for\ Powerline:h7
 " set guifont=Roboto\ Mono\ for\ Powerline:h10
-set guifont=Monaco\ for\ Powerline:h10
+" set guifont=Monaco\ for\ Powerline:h10
 colorscheme gruvbox
 set termguicolors
 let g:gruvbox_contrast_dark = "medium"

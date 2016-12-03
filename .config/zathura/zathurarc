@@ -1,13 +1,13 @@
-set index-fg #EBDBB2
-set index-bg #282828
-set index-active-fg 
-set index-active-bg
+set index-fg "#EBDBB2"
+set index-bg "#282828"
+set index-active-fg "#282828"
+set index-active-bg "#8ec07c"
 set default-fg "#EBDBB2"
 set default-bg "#282828"
-set inputbar-bg #282828
-set inputbar-fg #EBDBB2
-set recolor-darkcolor #EBDBB2
-set recolor-lightcolor #282828
+set inputbar-bg "#282828"
+set inputbar-fg "#EBDBB2"
+set recolor-darkcolor "#EBDBB2"
+set recolor-lightcolor "#282828"
 set font Roboto Mono for Powerline 10
 set guioptions i
 set recolor true

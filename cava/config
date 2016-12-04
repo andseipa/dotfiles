@@ -120,8 +120,8 @@ gravity = 2
 # This one is tricky. You can have as much keys as you want. 
 # remember to uncomment more then one key! More keys = more precision.
 # Look at readme.md on github for further explanations and examples.
-1 = 2 # bass
-2 = 2
-3 = 2 # midtone
+1 = 8 # bass
+2 = 6
+3 = 4 # midtone
 4 = 2
-5 = 2 # treble
+5 = 1 # treble

@@ -5,8 +5,8 @@ fi
 if [ ! -e "$HOME/.zshrc" ]; then
 	ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
 fi
-if [ ! -e "$HOME/.vimperator/colors" ]; then
-	ln -s $HOME/.dotfiles/vimperator/colors $HOME/.vimperator/colors
+if [ ! -e "$HOME/.vimperator/colors/gruvbox.vimp" ]; then
+	ln -s $HOME/.dotfiles/vimperator/colors/gruvbox.vimp $HOME/.vimperator/colors/gruvbox.vimp
 fi
 if [ ! -e "$HOME/.vimperatorrc" ]; then
 	ln -s $HOME/.dotfiles/vimperatorrc $HOME/.vimperatorrc
@@ -26,8 +26,8 @@ fi
 if [ ! -e "$HOME/.config/libinput-gestures.conf" ]; then
 	ln -s $HOME/.dotfiles/libinput-gestures.conf $HOME/.config/libinput-gestures.conf
 fi
-if [ ! -e "$HOME/.config/mpd" ]; then
-	ln -s $HOME/.dotfiles/mpd $HOME/.config/mpd
+if [ ! -e "$HOME/.config/mpd/mpd.conf" ]; then
+	ln -s $HOME/.dotfiles/mpd/mpd.conf $HOME/.config/mpd/mpd.conf
 fi
 if [ ! -e "$HOME/.config/ncmpcpp" ]; then
 	ln -s $HOME/.dotfiles/ncmpcpp $HOME/.config/ncmpcpp

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pkill dhcpd
+sudo dhcpcd bnep0

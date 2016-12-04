@@ -23,9 +23,9 @@ export GDK_DPI_SCALE=0.5
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 
@@ -86,7 +86,11 @@ alias vpnkill="pkill openvpn"
 alias mkill="mpd --kill"
 alias vim="nvim" 
 alias zathura="zathura --fork"
-alias nmrestart="systemctl restart NetworkManager"
 alias sudo="sudo "
 alias polyr=/home/andreas/.config/polybar/launch.sh
-alias dim='light -S 0.2'
+alias dim='light -S 0.2 & sct 2000'
+
+# alias iwscan='iw dev wlp58s0 scan | grep -i -A2 signal'
+# alias iwlink='iw dev wlp58s0 link'
+# alias wpaconn='wpa_supplicant -B -i wlp58s0 -c /home/andreas/.wpa_main.conf & dhcpcd wlp58s0'
+# alias nmrestart="systemctl restart NetworkManager"

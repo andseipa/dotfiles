@@ -9,9 +9,7 @@ libinput-gestures-setup start
 compton -b &
 mpd &
 nitrogen --restore &
-# conky &
-# xsetroot -cursor_name left_ptr
-# ibus-daemon &
-# i3blocks &
+dropbox &
+xautolock -time 5 -locker '/home/andreas/bin/lock' &
 
 exec i3

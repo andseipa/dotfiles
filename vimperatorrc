@@ -1,0 +1,26 @@
+colorscheme gruvbox
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+noremap <F7> :tabclose<Return>
+noremap <F8> u
+noremap <F9> H
+noremap <F10> :interbookmarks<Return>
+noremap <F11> gH
+noremap <F12> L
+noremap H gT
+noremap L gt
+noremap J H
+noremap K L
+map <Space> <Nop>
+noremap s :set toolbars=invnavigation<CR>
+let mapleader="<Space>"
+set "editor=termite -geometry 120x40 -e vim -f"
+set visualbell
+set gui=nonavigation
+set status=input
+noremap q :tabclose<Return>
+noremap w q

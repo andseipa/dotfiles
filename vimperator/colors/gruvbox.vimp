@@ -1,0 +1,42 @@
+" Vimperator colorscheme
+
+hi Hint          font-family: "SFNS Display", "Segoe UI", sans-serif; font-size: 9pt; font-weight: bold; background: -moz-linear-gradient(top, #6BA7EF, #3163AA); text-shadow: 0 1px #1D3C66; text-transform: uppercase; color: #ebdbb2; background-color: red; padding: 2px 5px; border-radius: 0px; border: 0px solid #3366AD;
+hi HintElem      color: #ebdbb2;       background: #282828; 
+hi HintActive    color: #ebdbb2;       background: #282828;  
+hi CmdLine		color: #ebdbb2; background: #282828;
+hi ContentSeparator border-top: 0px solid gray;
+
+
+hi StatusLine  color: #928374;     background: #282828;    font-size: 9pt;    font-family: "Sauce Code Powerline", Osaka, monospace;
+
+
+hi Normal       color: #8ec07c;     background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi InfoMsg      color: #8ec07c;     background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi ModeMsg      color: #8ec07c;     background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi MoreMsg      color: #8ec07c;     background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi LineNr       color: #83a598;  background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi Question     color: #fabd2f; background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi WarningMsg   color: #fb4934;    background: #282828;   font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi Keyword      color: #83a598;                  font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi Tag          color: #83a598;                  font-size: 9pt;     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi NonText      background: #282828;
+hi Null         color: #8ec07c;
+hi Filter       color: #aacf53;     font-weight: bold;
+
+
+hi CompTitle            -moz-appearance: statusbar; font-family: "SFNS Display", "Segoe UI", monospace; font-weight: bold; text-indent: 5px; height: 20px; color: #edbdd2; text-shadow: 0px;
+hi CompTitle>* color: #edbdd2; text-shadow: 0px;
+hi CompResult   width: 45%;         overflow: hidden;                       font-family: "Sauce Code Powerline", Osaka, monospace;
+hi CompDesc     width: 50%;                                                 font-family: "Sauce Code Powerline", Osaka, monospace;
+hi CompItem     font-family: "Sauce Code Powerline", Osaka, monospace;
+hi CompItem[selected]  color: #8ec07c;  background: #282828;  font-weight: bold;  font-family: "Sauce Code Powerline", Osaka, monospace;
+
+hi Title        color: #8ec07c;
+hi Indicator    color: #83a598;
+hi String       color: #d3869b;
+hi Number       color: #d3869b;
+hi Object       color: Khaki;
+hi Function     color: DeepSkyBlue;
+hi URL          color: PowderBlue;
+
+hi TabNumber   color: #ebdbb2;       font-weight: bold;  font-size: 10pt;    font-family: "Sauce Code Powerline", Osaka, monospace;

@@ -100,6 +100,7 @@
 # Others
 	bindsym $mod+r exec rofi -show run
 	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+	bindsym $mod+Shift+a exec lock
 
 # Volume & Media Bindings
 	bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
@@ -155,9 +156,11 @@
 # Floating
 	for_window [class="Lxappearance"] floating enable
 	for_window [class="Nitrogen"] floating enable
+	for_window [class="feh"] floating enable
 
 # Autoexec
 	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 	exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
 	exec --no-startupid dropbox
+	exec --no-startupid xautolock -time 5 -locker '/home/andreas/bin/lock' &
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh

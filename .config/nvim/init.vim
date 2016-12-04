@@ -187,6 +187,21 @@ let g:pandoc#formatting#mode = "ha"
 let g:pandoc#formatting#textwidth = 74
 let g:pandoc#folding#fdc = 0
 
+let g:pandoc#command#custom_open = "MyPandocOpen"
+
+" function! MyPandocOpen(file)
+" 	return 'zathura --fork' . shellescape(expand(a:file,':p'))
+" endfunction
+
+function! MyPandocOpen(file)
+	return 'zathura --fork'. a:file
+endfunction
+
+function ZathuraOpen(type)
+	let b:zathura = @% . ".pdf"
+	execute "!zathura --fork " . shellescape(b:zathura)
+endfunction
+
 " }}}
 " {{{	Keybinds
 
@@ -196,7 +211,8 @@ let maplocalleader = ","
 
 " Easy access to notesdir, vimrc, etc
 map <leader>1 :CtrlP $NOTESDIR<CR>
-map <leader>2 :CtrlP $DEVDIR<CR>
+map <leader>2 :CtrlP $PRESENDIR<CR>
+map <leader>3 :CtrlP $DEVDIR<CR>
 map <leader>0 :e ~/.config/nvim/init.vim<CR>
 map <leader>9 :e ~/.config/i3/config<CR>
 map <leader>8 :e ~/.config/termite/config<CR>
@@ -221,7 +237,8 @@ inoremap jj <ESC>
 
 " Pandocs
 map <leader>mr :Pandoc pdf<CR>
-map <leader>mp : !zathura --fork 
+map <leader>mp :Pandoc! pdf<CR>
+" map <leader>mp : !zathura --fork 
 
 " Yank to clipboard
 map <leader>y "+y

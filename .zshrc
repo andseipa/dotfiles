@@ -81,7 +81,8 @@ alias tat="tmux a -t"
 alias tkill="tmux kill-session -t"
 
 # misc
-alias vpn="openvpn --config /etc/openvpn/Sweden.conf"
+alias vpn="openvpn --config /etc/openvpn/Sweden.conf --daemon"
+alias vpnkill="pkill openvpn"
 alias mkill="mpd --kill"
 alias vim="nvim" 
 alias zathura="zathura --fork"

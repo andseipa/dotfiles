@@ -42,9 +42,9 @@ font = Sauce Code Powerline 11
 
 [colors]
 # background = #1d2021
-background = #282828
+# background = #282828
 # background = rgba(40,40,40,0.9)
-# background = #32302f
+background = #32302f
 	foreground = #ebdbb2
 	foreground_bold = #ebdbb2
 

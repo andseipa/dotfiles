@@ -217,6 +217,7 @@ map <leader>0 :e ~/.config/nvim/init.vim<CR>
 map <leader>9 :e ~/.config/i3/config<CR>
 map <leader>8 :e ~/.config/termite/config<CR>
 map <leader>7 :e ~/.config/polybar/config<CR>
+map <leader>6 :e ~/.zshrc<CR>
 
 " Add ctrl-tab support
 noremap <S-tab> :tabnext<CR>
@@ -302,7 +303,7 @@ set guifont=Fira\ Mono\ for\ Powerline:h7
 " set guifont=Monaco\ for\ Powerline:h10
 colorscheme gruvbox
 set termguicolors
-let g:gruvbox_contrast_dark = "medium"
+let g:gruvbox_contrast_dark = "soft"
 let g:gruvbox_termcolors = "256"
 set background=dark
 
@@ -311,5 +312,5 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 " Enables cursor similar to gui programs
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-
+" hi Normal guibg=NONE ctermbg=NONE
 " }}}

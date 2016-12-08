@@ -9,7 +9,7 @@
 #	Enviroment variables
 # ========================================
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.3.0/bin:$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/andreas/.oh-my-zsh
 export EDITOR=nvim
 export VISUAL=nvim
@@ -89,6 +89,7 @@ alias zathura="zathura --fork"
 alias sudo="sudo "
 alias polyr=/home/andreas/.config/polybar/launch.sh
 alias dim='light -S 0.2 & sct 2000'
+alias lit='light -S 50 & sct'
 
 # alias iwscan='iw dev wlp58s0 scan | grep -i -A2 signal'
 # alias iwlink='iw dev wlp58s0 link'

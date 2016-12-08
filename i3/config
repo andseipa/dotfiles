@@ -15,7 +15,8 @@
 # ========================================
 
 # Env colors
-	set $back			#282828
+	# set $back			#282828
+	set $back			#32302f
 	set $black			#1d2021
 	set $grey			#928374
 	set $lightgrey		#bdae93
@@ -30,8 +31,8 @@
 # Window colors:
 # class									border		backgr.		text		split
 	client.focused              		$green		$green		$white		$green
-	client.focused_inactive				$grey		$grey		$lightgrey	$grey
-	client.unfocused            		$grey		$grey		$lightgrey	$grey
+	client.focused_inactive				$back		$back		$lightgrey	$back
+	client.unfocused            		$back		$back		$lightgrey	$back
 	client.urgent               		$red		$red		$black		$red
 
 # Workspace icons
@@ -52,10 +53,17 @@
 
 	font pango:Monaco 10
 	floating_modifier $mod
+
+# Wide gaps for E S T H E T I C
 	gaps inner 52
 	gaps outer 0
+
+# Borders
 	new_float	pixel 	2
 	new_window pixel 	2
+
+# Hide borders when only one window is present
+	hide_edge_borders smart
 
 # ========================================
 #	Keybindings
@@ -155,19 +163,16 @@
 	for_window [class="Chromium"] border pixel 0
 	for_window [class="Firefox"] border pixel 0
 	for_window [class="discord"] border pixel 0
+	for_window [class="Lxappearance"] border pixel 0
 	for_window [class="Nitrogen"] border pixel 0
 
 # Floating
 	for_window [class="Lxappearance"] floating enable
 	for_window [class="Nitrogen"] floating enable
 	for_window [class="feh"] floating enable
-	for_window [class="StylishInstall*"] floating enable
+	for_window [class="MPlayer"] floating enable
 
 # Autoexec
 	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 	exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
-	exec --no-startupid dropbox
-	exec --no-startupid powah
-	exec --no-startupid xautolock -time 5 -locker '/home/andreas/bin/lock' &
-# exec_always --no-startup-id "i3-msg 'workspace 3; append_layout /home/andreas/.i3/workspace-3.json'"
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh

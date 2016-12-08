@@ -1,4 +1,4 @@
-colorscheme gruvbox
+colorscheme gruvboxlight
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <C-f> <Right>
@@ -24,3 +24,4 @@ set gui=nonavigation
 set status=input
 noremap q :tabclose<Return>
 noremap w q
+noremap <C-c> <ESC>

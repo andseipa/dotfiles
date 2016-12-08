@@ -11,7 +11,8 @@
 ; ========================================
 
 [colors]
-background		= #282828
+; background		= #282828
+background		= #32302f
 foreground		= #ebdbb2
 grey			= #928374
 lightgrey		= #a89984
@@ -261,7 +262,7 @@ label-disconnected-foreground = #55
 
 [module/date]
 type = internal/date
-date = %H:%M
+date = %{F#928374} %H:%M
 ; date = %%{F#928374}%%{F#ebdbb2} %H:%M
 date-alt = %%{F#928374}%{F#ebdbb2} %d-%m-%Y %%{F#928374}%%{F#ebdbb2} %H:%M
 interval = 5
@@ -313,11 +314,11 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.green}
+format-charging = <animation-charging> %{F#928374} <label-charging>
+format-charging-underline = ${colors.cyan}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.background}
-format-full = %{F#55}%{F#ebdbb2}  <label-full>
+format-full = %{F#55}%{F#928374} <label-full>
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 

@@ -316,7 +316,7 @@ full-at = 98
 
 format-charging = <animation-charging> %{F#928374} <label-charging>
 format-charging-underline = ${colors.cyan}
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity> %{F#928374} <label-discharging>
 format-discharging-underline = ${colors.background}
 format-full = %{F#55}%{F#928374} <label-full>
 format-full-underline = ${self.format-charging-underline}

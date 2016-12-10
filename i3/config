@@ -171,6 +171,9 @@
 	for_window [class="Nitrogen"] floating enable
 	for_window [class="feh"] floating enable
 	for_window [class="MPlayer"] floating enable
+	for_window [class="mpv"] floating enable
+	for_window [class="Places"] floating enable
+
 
 # Autoexec
 	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1

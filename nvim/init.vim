@@ -209,6 +209,9 @@ endfunction
 let mapleader = "\<Space>"	
 let maplocalleader = ","
 
+" Insert date
+map <leader>r :r! date "+\%d/\%m-\%Y"<CR>
+
 " Easy access to notesdir, vimrc, etc
 map <leader>1 :CtrlP $NOTESDIR<CR>
 map <leader>2 :CtrlP $PRESENDIR<CR>

@@ -1,3 +1,6 @@
+! ########################################
+!	Xft settings
+! ########################################
 Xft.dpi: 192
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
@@ -6,7 +9,20 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-/* *background: #282828 */
+
+! ########################################
+!	URXVT
+! ########################################
+
+URxvt.font: xft:cousine for powerline:regular:size=12
+URxvt.scrollBar: false
+
+! ########################################
+!	Colors
+! ########################################
+
+! Alternative bg:
+! *background: #282828
 *background: #32302f
 *foreground: #ebdbb2
 ! Black + DarkGrey
@@ -34,7 +50,11 @@ Xft.rgba: rgb
 *color7:  #a89984
 *color15: #ebdbb2
 
-/* Rofi */
+
+! ########################################
+!	Rofi
+! ########################################
+
 #define r_bg   #282828
 #define r_fg   #ebdbb2
 #define r_hlfg #8ec07c
@@ -44,7 +64,6 @@ rofi.color-enabled: true
 rofi.color-normal: r_bg,r_fg,#282828,r_bg,r_hlfg
 rofi.color-urgent: r_bg,#fb4934,#282828,r_bg,r_hlfg
 rofi.color-active: r_bg,r_fg,#282828,r_bg,#fe8019
-! states: background, border
 rofi.color-window: r_bg,#d5c4a1
 
 rofi.separator-style: solid
@@ -52,7 +71,6 @@ rofi.sidebar-mode: false
 rofi.bw: 0
 rofi.columns: 1
 rofi.hide-scrollbar: true
-/* rofi.eh: 150 */
 
 rofi.yoffset: 0
 rofi.opacity: 80

@@ -5,17 +5,22 @@
 # ========================================
 
 [options]
-# Font switcher ##########################
-# font = FuraMonoForPowerline Nerd Font 9
-# font = Fira Mono for Powerline 10
-# font = Monaco for Powerline 10
-# font = Roboto Mono for Powerline 10
-# font = FantasqueSansMono\-Regular.ttf+Powerline+Awesome 5
+
+# font = FuraCode Nerd Font 12
+# font = FuraMonoForPowerline Nerd Font 11
+# font = Iosevka Nerd Font 14
+# font = Monaco for Powerline 11
+# font = Roboto Mono for Powerline 11
 # font = Ubuntu Mono derivative Powerline 13
-# font = Roboto Mono for Powerline 10
-# font = Hack 10
-# font = Anonymice Powerline 12
-font = Sauce Code Powerline 11
+# font = Hack 12
+# font = Anonymice Powerline 14
+# font = Sauce Code Powerline 12
+# font = FantasqueSansMono Nerd Font 14
+font = Liberation Mono for Powerline 12
+# font = Cousine for Powerline 12
+# font = MesloLGS Nerd Font 12
+# font = DejaVu Sans Mono for Powerline 12
+
 
 	scroll_on_output = false
 	scroll_on_keystroke = true

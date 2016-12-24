@@ -5,6 +5,8 @@ cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
 noremap <F7> :tabclose<Return>
 noremap <F8> u
 noremap <F9> H
@@ -22,6 +24,7 @@ set "editor=termite -geometry 120x40 -e vim -f"
 set visualbell
 set gui=nonavigation
 set status=input
+set focuscontent
 noremap q :tabclose<Return>
 noremap w q
 noremap <C-c> <ESC>

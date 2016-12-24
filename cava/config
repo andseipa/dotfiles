@@ -93,7 +93,8 @@ style = mono
 [color]
 
 # supported colors are: red, green, yellow, magenta, cyan, white, blue, black.
-background = black
+background = '#32302f'
+# background = black
 foreground = magenta
 
 
@@ -124,4 +125,4 @@ gravity = 2
 2 = 6
 3 = 4 # midtone
 4 = 2
-5 = 1 # treble
+5 = 2 # treble

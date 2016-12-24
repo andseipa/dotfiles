@@ -10,7 +10,7 @@ compton -b &
 mpd &
 nitrogen --restore &
 dropbox &
-xautolock -time 10 -locker '/home/andreas/bin/lock' -detectsleep &
+xautolock -time 15 -locker '/home/andreas/bin/lock' -detectsleep &
 
 
 exec i3

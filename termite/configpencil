@@ -1,0 +1,83 @@
+# ========================================
+#	termite config
+#
+#				by Andreas Seipajarvi
+# ========================================
+
+[options]
+
+# font = FuraCode Nerd Font 12
+# font = FuraMonoForPowerline Nerd Font 11
+# font = Iosevka Nerd Font 14
+# font = Monaco for Powerline 11
+# font = Roboto Mono for Powerline 11
+# font = Ubuntu Mono derivative Powerline 13
+# font = Hack 12
+# font = Anonymice Powerline 14
+# font = Sauce Code Powerline 12
+# font = FantasqueSansMono Nerd Font 14
+# font = Liberation Mono for Powerline 12
+# font = Cousine for Powerline 12
+# font = MesloLGS Nerd Font 12
+font = DejaVu Sans Mono for Powerline 12
+
+	scroll_on_output = false
+	scroll_on_keystroke = true
+	audible_bell = false
+	visible_bell = true
+	mouse_autohide = true
+	allow_bold = true
+	dynamic_title = true
+	urgent_on_bell = true
+	clickable_url = true
+	scrollback_lines = 10000
+	search_wrap = true
+
+# "system", "on" or "off"
+	cursor_blink = system
+
+# "block", "underline" or "ibeam"
+	cursor_shape = block
+
+# Browser by default
+	browser = chromium
+
+[colors]
+background = #212121
+	foreground = #f1f1f1
+	foreground_bold = #f1f1f1
+
+# dark0 + gray
+	color0 = #212121
+	color8 = #424242
+
+# neutral_red + bright_red
+	color1 = #c30771
+	color9 = #fb007a
+
+# neutral_green + bright_green
+	color2 = #10a778
+	color10 = #5fd7af
+
+# neutral_yellow + bright_yellow
+	color3 = #a89c14
+	color11 = #f3e430
+
+# neutral_blue + bright_blue
+	color4 = #008ec4
+	color12 = #20bbfc
+
+# neutral_purple + bright_purple
+	color5 = #6855de
+#color5 = #523c79
+	color13 = #6855de
+
+# neutral_aqua + faded_aqua
+	color6 = #20a5ba
+	color14 = #4fb8cc
+
+# light4 + light1
+	color7 = #d9d9d9
+	color15 = #f1f1f1
+
+# vim: ft=dosini cms=#%s

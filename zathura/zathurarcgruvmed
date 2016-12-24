@@ -1,0 +1,28 @@
+set index-fg "#EBDBB2"
+set index-bg "#282828"
+set index-active-fg "#282828"
+set index-active-bg "#8ec07c"
+set default-fg "#EBDBB2"
+set default-bg "#282828"
+set inputbar-bg "#282828"
+set inputbar-fg "#EBDBB2"
+set recolor-darkcolor "#EBDBB2"
+set recolor-lightcolor "#282828"
+set font Roboto Mono for Powerline 10
+set guioptions i
+set recolor true
+set zoom-min 100
+set zoom-max 500
+unmap [fullscreen] a
+unmap [fullscreen] o
+unmap [fullscreen] e
+unmap [fullscreen] u
+map a toggle_fullscreen
+map [fullscreen] a toggle_fullscreen
+map e zoom in
+map o zoom out
+map [fullscreen] e zoom in
+map [fullscreen] o zoom out
+map [fullscreen] u navigate
+map [fullscreen] i toggle_statusbar
+

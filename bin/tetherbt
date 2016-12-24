@@ -1,4 +1,0 @@
-#!/bin/bash
-
-hciconfig hci0 up
-dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0/dev_44_78_3E_29_10_33 org.bluez.Network1.Connect string:'nap'

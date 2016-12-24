@@ -59,3 +59,6 @@ fi
 if [ ! -e "$HOME/.config/mimeapps.list" ]; then
 	ln -s $HOME/.dotfiles/mimeapps.list $HOME/.config/mimeapps.list
 fi
+if [ ! -e "$HOME/bin" ]; then
+	ln -s $HOME/.dotfiles/bin $HOME/bin
+fi

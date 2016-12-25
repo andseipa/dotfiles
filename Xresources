@@ -14,8 +14,10 @@ Xft.rgba: rgb
 !	URXVT
 ! ########################################
 
-URxvt.font: xft:cousine for powerline:regular:size=12
+URxvt.font: xft:InconsolataForPowerline Nerd Font:regular:size=14
 URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.internalBorder: 20
 
 ! ########################################
 !	Colors

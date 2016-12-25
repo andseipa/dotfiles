@@ -397,12 +397,11 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = "soft"
 let g:gruvbox_termcolors = "256"
 set background=dark
-set termguicolors
+" set termguicolors
 
 " Enable true color for neovim
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 " Enables cursor similar to gui programs
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-" hi Normal guibg=NONE ctermbg=NONE
 " }}}

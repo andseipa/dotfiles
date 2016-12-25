@@ -1,14 +1,18 @@
-; ========================================
+; ================================================================================
 ;
-;	
-;	Polybar config
+;	                     oooo               .o8
+;	                     `888              "888
+;	oo.ooooo.   .ooooo.   888  oooo    ooo  888oooo.   .oooo.   oooo d8b
+;	 888' `88b d88' `88b  888   `88.  .8'   d88' `88b `P  )88b  `888""8P
+;	 888   888 888   888  888    `88..8'    888   888  .oP"888   888
+;	 888   888 888   888  888     `888'     888   888 d8(  888   888
+;	 888bod8P' `Y8bod8P' o888o     .8'      `Y8bod8P' `Y888""8o d888b
+;	 888                       .o..P'
+;	o888o                      `Y8P'		by Andreas Seipajarvi
 ;
-;					by Andreas Seipajarvi
-; 
+; ================================================================================
 ;
-; ========================================
-;	Visuals
-; ========================================
+; {{{	Visuals
 
 [colors]
 ; background		= #282828
@@ -23,10 +27,8 @@ magenta			= #d3869b
 cyan			= #8ec07c
 transparent		= #00000000
 
-
-; ========================================
-;	Global
-; ========================================
+; }}}
+; {{{	Global
 
 [global/wm]
 margin-top = 0
@@ -71,10 +73,10 @@ font-0 = Source Code Pro for Powerline:size=10:regular;0
 font-1 = Ionicons:size=14:Medium:fontformat=truetype;2
 ; font-2 = Ionicons:size=12:Medium:fontformat=truetype;-2
 
+; }}}
+; {{{	Modules
 
-; ========================================
-; Modules
-; ========================================
+; {{{ Module: General
 
 modules-left = i3 
 modules-center = 
@@ -89,12 +91,16 @@ tray-padding = 2
 
 wm-restack = i3
 
+; }}}
+; {{{ Module: xwindow
 
 [module/xwindow]
 type = internal/xwindow
 label = %title%
 label-maxlen = 30
 
+; }}}
+; {{{ Module: filesystem
 
 [module/filesystem]
 type = internal/fs
@@ -109,28 +115,8 @@ label-mounted = %mountpoint%: %percentage_free%
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = #55
 
-
-
-[module/bspwm]
-type = internal/bspwm
-ws-icon-default = x
-
-label-active = %index%
-label-active-background = #ee333333
-label-active-underline= #cc333333
-label-active-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%
-label-urgent-background = #bd2c40
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = #55
-label-empty-padding = 2
-
+; }}}
+; {{{ Module: i3
 
 [module/i3]
 type = internal/i3
@@ -170,6 +156,9 @@ ws-icon-8 = 8;
 ws-icon-9 = 9;
 ws-icon-default = 
 
+; }}}
+; {{{ Module: mpd
+
 [module/mpd]
 type = internal/mpd
 
@@ -192,6 +181,8 @@ icon-repeat = 
 toggle-on-foreground = #e60053
 toggle-off-foreground = #66
 
+; }}}
+; {{{ Module: backlight
 
 [module/backlight]
 type = internal/xbacklight
@@ -210,6 +201,8 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = #55
 
+; }}}
+; {{{ Module: cpu
 
 [module/cpu]
 type = internal/cpu
@@ -217,6 +210,8 @@ interval = 2
 label = %{F#666}%{F#cc} %percentage%
 label-underline = ${colors.cyan}
 
+; }}}
+; {{{ Module: memory
 
 [module/memory]
 type = internal/memory
@@ -224,6 +219,8 @@ interval = 2
 label = %{F#665}%{F#cc} %percentage_used%
 label-underline = ${colors.blue}
 
+; }}}
+; {{{ Module: wlan
 
 [module/wlan]
 type = internal/network
@@ -246,6 +243,8 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.grey}
 
+; }}}
+; {{{ Module: eth
 
 [module/eth]
 type = internal/network
@@ -259,6 +258,8 @@ label-connected = %{F#55}%{F#ff} %local_ip%
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = #55
 
+; }}}
+; {{{ Module: date
 
 [module/date]
 type = internal/date
@@ -268,6 +269,8 @@ date-alt = %%{F#928374}%{F#ebdbb2} %d-%m-%Y %%{F#928374}%%{F#ebdbb2} %H:%M
 interval = 5
 format-underline = ${colors.background}
 
+; }}}
+; {{{ Module: volume
 
 [module/volume]
 type = internal/volume
@@ -307,6 +310,8 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = #55
 
+; }}}
+; {{{ Module: battery
 
 [module/battery]
 type = internal/battery
@@ -347,6 +352,8 @@ animation-charging-2 = 
 animation-charging-foreground = ${colors.grey}
 animation-charging-framerate = 750
 
+; }}}
+; {{{ Module: temperature
 
 [module/temperature]
 type = internal/temperature
@@ -366,6 +373,9 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = #55
+
+; }}}
+; {{{ Module: powermenu
 
 [module/powermenu]
 type = custom/menu
@@ -392,4 +402,7 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+; }}}
+
 ; vim:ft=dosini
+; }}}

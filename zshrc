@@ -13,10 +13,7 @@
 #
 # ============================================================
 
-
-# ========================================
-#	Enviroment variables
-# ========================================
+# {{{	Enviroment variables
 
 export PATH=$HOME/.gem/ruby/2.3.0/bin:$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/andreas/.oh-my-zsh
@@ -44,9 +41,8 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 export ELM_SCALE=1.5
 
-# ========================================
-#	ZSH init
-# ========================================
+# }}}
+# {{{	ZSH init
 
 ZSH_THEME="geometry"
 
@@ -55,19 +51,15 @@ HIST_STAMPS="dd/mm.yyyy"
 
 plugins=()
 
-
-# ========================================
-#	Source scripts
-# ========================================
+# }}}
+# {{{	Source scripts
 
 source "/home/andreas/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-# ======================================== 
-#	Alias
-# ======================================== 
+# }}}
+# {{{	Alias
 
 # list
 alias ls="ls --color=auto"
@@ -107,3 +99,5 @@ alias lit='light -S 50 & sct'
 alias pdfclean='mv $(find $NOTESDIR -iname \*.pdf) ~/Documents/pdf'
 alias tetherbt="dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0/dev_44_78_3E_29_10_33 org.bluez.Network1.Connect string:'nap'"
 alias tetherdh="dhcpd bnep0"
+
+# }}}

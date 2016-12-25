@@ -1,3 +1,23 @@
 #!/bin/bash
+#
+# A script to copy all the contents of root, excluding user directories.
+#
+#	by Andreas Seipajarvi
 
-rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /home/andreas/.backup
+date=`date +%d-%m-%Y`
+bdir=/home/andreas/.backup/
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+mkdir $bdir ${bdir}$date 2>/dev/null
+
+if [ -e "${bdir}$date" ]; then
+	echo -e "\n${bold}A backup already exist ($date).${normal}\n\n\tWould you like to overwrite?\n"
+	read overwrite;
+	case $overwrite in
+		y|Y) echo -e "Are you sure?";;
+		*) exit;;
+	esac
+else
+	rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / ${bdir}$date
+fi

@@ -1,18 +1,26 @@
+# ================================================================================
 #
-#	.i3 config
-#				by Andreas Seipajarvi
+#	 o8o    .oooo.                 .o88o.
+#	 `"'  .dP""Y88b                888 `"
+#	oooo        ]8P'     .ooooo.  o888oo   .oooooooo
+#	`888      <88b.     d88' `"Y8  888    888' `88b
+#	 888       `88b.    888        888    888   888
+#	 888  o.   .88P     888   .o8  888    `88bod8P'
+#	o888o `8bd88P'      `Y8bod8P' o888o   `8oooooo.
+#	                                      d"     YD
+#	            by Andreas Seipajarvi     "Y88888P'
 #
-# ========================================
-#	Variables
-# ========================================
+# ================================================================================
+
+
+# {{{	Variables
 
 	set $mod Mod4
 	set $borders    2
 	set $resize     2
 
-# ========================================
-#	Visuals 
-# ========================================
+# }}}
+# {{{	Visuals 
 
 # Env colors
 	# set $back			#282828
@@ -47,9 +55,8 @@
 	set $workspace9 8
 	set $workspace10 9
 
-# ========================================
-#	General configuration
-# ========================================
+# }}}
+# {{{	General configuration
 
 	font pango:Monaco 10
 	floating_modifier $mod
@@ -65,9 +72,8 @@
 # Hide borders when only one window is present
 	hide_edge_borders smart
 
-# ========================================
-#	Keybindings
-# ========================================
+# }}}
+# {{{	Keybindings
 
 # Window-Related Bindings
 	bindsym $mod+x kill
@@ -150,9 +156,8 @@
 # Easy workspace switch
 	bindsym $mod+Tab workspace back_and_forth
 
-# ========================================
-#	Application specific
-# ========================================
+
+# {{{	Application specific
 
 # Program Workspaces
 	assign [class="Chromium"] $workspace1
@@ -179,3 +184,5 @@
 	exec --no-startup-id xinput set-prop "11" "libinput Tapping Enabled" 1
 	exec --no-startup-id xinput set-prop "11" "libinput Natural Scrolling Enabled" 1
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# }}}

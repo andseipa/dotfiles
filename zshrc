@@ -87,9 +87,9 @@ alias tat="tmux a -t"
 alias tkill="tmux kill-session -t"
 
 # misc
-alias fig="figlet -f roman "
-alias vpn="openvpn --config /etc/openvpn/Sweden.conf --daemon"
-alias vpnkill="pkill openvpn"
+alias fig="figlet -f roman"
+# alias vpn="openvpn --config /etc/openvpn/Sweden.conf --daemon"
+# alias vpnkill="pkill openvpn"
 alias mkill="mpd --kill"
 alias vim="nvim" 
 alias zathura="zathura --fork"
@@ -97,7 +97,9 @@ alias sudo="sudo "
 alias dim='light -S 0.2 & sct 2000'
 alias lit='light -S 50 & sct'
 alias pdfclean='mv $(find $NOTESDIR -iname \*.pdf) ~/Documents/pdf'
-alias tetherbt="dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0/dev_44_78_3E_29_10_33 org.bluez.Network1.Connect string:'nap'"
-alias tetherdh="dhcpd bnep0"
+# alias tetherbt="dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0/dev_A8_B8_6E_EA_C2_6C org.bluez.Network1.Connect string:'nap'"
+# alias tetherdh="dhcpcd bnep0"
+alias tetha="dhcpcd enp0s20f0u1"
+alias tethx="dhcpcd -k enp0s20f0u1"
 
 # }}}

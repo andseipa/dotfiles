@@ -1,11 +1,13 @@
 #!/bin/bash
 
-COLOR=$(xrdb -query | grep -i background | awk ' {print $2} ')
+# COLOR=$(xrdb -query | grep -i background | awk ' {print $2} ')
 
-scrot /tmp/screenlock.png
+# scrot /tmp/screenlock.png
 
-mogrify -scale 10% -scale 1000% /tmp/screenlock.png
+# mogrify -scale 10% -scale 1000% /tmp/screenlock.png
 
-i3lock -c $COLOR -i /tmp/screenlock.png
+slock
+xset dpms force suspend
 
-pgrep i3lock && xset dpms force off
+# xset dpms force suspend && slock
+# i3lock -c $COLOR -i /tmp/screenlock.png

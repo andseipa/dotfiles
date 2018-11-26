@@ -47,7 +47,7 @@ offset-y = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 2
+overline-size = 0
 overline-color = #f00
 underline-size = 2
 underline-color = ${colors.cyan}
@@ -61,16 +61,21 @@ border-right-color = ${colors.transparent}
 border-top = 50
 border-top-color = ${colors.transparent}
 
-spacing = 1
+spacing = 0
 padding-left = 0
 padding-right = 2
-module-margin-left = 2
-module-margin-right = 1
+padding-bottom = 0
+padding-top = 0
+margin-top = 2
+module-margin-left = 0
+module-margin-right = 2
 
-font-0 = Source Code Pro for Powerline:size=10:regular;0
+font-0 = Source Code Pro for Powerline:size=18:regular;5
+font-1 = Material Icons:size=26:regular;10
 ; font-0 = Roboto Mono for Powerline:size=8:regular:fontformat=truetype;-2
 ; font-1 = unifont:size=8:heavy:fontformat=truetype;-2
-font-1 = Ionicons:size=14:Medium:fontformat=truetype;2
+; font-1 = Ionicons:size=25:Medium:fontformat=truetype;7
+; font-1 = Material\ Icons:size=25:Medium:fontformat=truetype;7
 ; font-2 = Ionicons:size=12:Medium:fontformat=truetype;-2
 
 ; }}}
@@ -79,8 +84,8 @@ font-1 = Ionicons:size=14:Medium:fontformat=truetype;2
 ; {{{ Module: General
 
 modules-left = i3 
-modules-center = 
-modules-right = battery volume wlan date
+modules-center = date
+modules-right = battery volume wlan
 
 ; modules = mpd memory cpu temperture xwindow
 
@@ -134,26 +139,26 @@ label-unfocused = %icon%
 label-unfocused-padding = 1
 label-unfocused-foreground = ${colors.grey}
 
-label-urgent = %icon%!
+label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 1
 
 label-visible = %index%
 label-visible-foreground = #55
-label-visible-padding = 3
+label-visible-padding = 1
 
-ws-icon-0 = 0;
+ws-icon-0 = 0;
 ; ws-icon-0 = 0;
-ws-icon-1 = 1;
-ws-icon-2 = 2;
-ws-icon-3 = 3;
-ws-icon-4 = 4;
-ws-icon-5 = 5;
-ws-icon-6 = 6;
-ws-icon-7 = 7;
-ws-icon-8 = 8;
-ws-icon-9 = 9;
+ws-icon-1 = 1;
+ws-icon-2 = 2;
+ws-icon-3 = 3;
+ws-icon-4 = 4;
+ws-icon-5 = 5;
+ws-icon-6 = 6;
+ws-icon-7 = 7;
+ws-icon-8 = 8;
+ws-icon-9 = 9; 
 ws-icon-default = 
 
 ; }}}
@@ -228,12 +233,13 @@ interface = wlp58s0
 interval = 3.0
 
 ; format-connected = <ramp-signal> <label-connected>
-format-connected = <ramp-signal>
+; format-connected = <ramp-signal>
+format-connected = <label-connected>
 format-connected-underline = ${colors.background}
 format-disconnected-underline = ${self.format-connected-underline}
 
-label-connected = %signal%
-label-disconnected = disc
+label-connected = %{F#928374} 
+label-disconnected = 
 label-disconnected-foreground = #55
 
 ramp-signal-0 = 
@@ -254,7 +260,7 @@ interval = 3.0
 format-connected-underline = #55aa55
 format-disconnected-underline = ${self.format-connected-underline}
 
-label-connected = %{F#55}%{F#ff} %local_ip%
+label-connected = %{F#55}%{F#ff} %local_ip%
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = #55
 
@@ -265,7 +271,7 @@ label-disconnected-foreground = #55
 type = internal/date
 date = %{F#928374} %H%M
 ; date = %%{F#928374}%%{F#ebdbb2} %H:%M
-date-alt = %%{F#928374}%{F#ebdbb2} %d-%m-%Y %%{F#928374}%%{F#ebdbb2} %H:%M
+date-alt = %%{F#928374}%{F#ebdbb2} %d-%m-%Y %%{F#928374}%%{F#ebdbb2} %H:%M
 interval = 5
 format-underline = ${colors.background}
 
@@ -280,16 +286,16 @@ format-volume = <ramp-volume>
 label-volume = VOL
 label-volume-foreground = ${color.grey}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 =  
+ramp-volume-2 = 
 ramp-volume-foreground = ${colors.grey}
 
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
 
-label-muted = 
+label-muted = 
 label-muted-foreground = ${colors.grey}
 
 bar-volume-width = 10
@@ -319,7 +325,7 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = %{F#928374} <label-charging>
+format-charging = %{F#928374}<label-charging>	
 format-charging-underline = ${colors.cyan}
 format-discharging = %{F#928374} <label-discharging>
 format-discharging-underline = ${colors.background}

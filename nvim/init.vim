@@ -45,6 +45,9 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'beewarloc/vim-fuse'
+Plug 'lynnard/pandoc-preview.vim'
+Plug 'jceb/vim-orgmode'
 
 call plug#end()
 
@@ -61,7 +64,6 @@ set incsearch		" search as i type
 set nohlsearch		" don't highlight the search
 set smartcase		" ignore case in search (for now)
 set ignorecase		
-
 
 set nobackup		" no backup files
 set noswapfile		" swap only inhibits
@@ -123,6 +125,7 @@ set sessionoptions-=help
 " {{{ Plugin specific: Pandoc
 
 let g:pandoc#filetypes#pandoc_markdown = 1
+let g:pandoc_preview_pdf_cmd = "zathura --fork "
 let g:pandoc#spell#enabled = 0
 let g:pandoc#formatting#mode = "hA"
 let g:pandoc#formatting#textwidth = 74
@@ -130,15 +133,15 @@ let g:pandoc#formatting#textwidth = 74
 let g:pandoc#folding#fdc = 0
 let g:pandoc#command#custom_open = "MyPandocOpen"
 let g:pandoc#toc#position = "bottom"
-
+let g:pandoc#command#latex_engine = "xelatex"
 
 function! MyPandocOpen(file)
-	return 'zathura --fork'. a:file
+	return 'zathura '. a:file
 endfunction
 
 function ZathuraOpen(type)
 	let b:zathura = @% . ".pdf"
-	execute "!zathura --fork " . shellescape(b:zathura)
+	execute "!zathura " . shellescape(b:zathura)
 endfunction
 
 " augroup pandoc

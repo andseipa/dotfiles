@@ -62,7 +62,7 @@
 	floating_modifier $mod
 
 # Wide gaps for E S T H E T I C
-	gaps inner 52
+	gaps inner 26
 	gaps outer 0
 
 # Borders
@@ -114,7 +114,7 @@
 # Others
 	bindsym $mod+r exec rofi -show run
 	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-	bindsym $mod+Shift+a exec lock
+	# bindsym $mod+Shift+a exec lock
 
 # Volume & Media Bindings
 	bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
@@ -126,8 +126,8 @@
 	bindsym XF86AudioPrev exec mpc prev
 
 # Screenbrightness
-	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 3
-	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 3
+	bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+	bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 
 # Workspace-Related Bindings
 	bindsym $mod+1 workspace $workspace1
@@ -163,13 +163,14 @@
 	assign [class="Chromium"] $workspace1
 	assign [class="Firefox"] $workspace1
 	assign [class="discord"] $workspace5
+	assign [class="Steam"] $workspace6
 
 # Borders
-	for_window [class="Chromium"] border pixel 0
-	for_window [class="Firefox"] border pixel 0
-	for_window [class="discord"] border pixel 0
-	for_window [class="Lxappearance"] border pixel 0
-	for_window [class="Nitrogen"] border pixel 0
+	# for_window [class="Chromium"] border pixel 0
+	# for_window [class="Firefox"] border pixel 0
+	# for_window [class="discord"] border pixel 0
+	# for_window [class="Lxappearance"] border pixel 0
+	# for_window [class="Nitrogen"] border pixel 0
 
 # Floating
 	for_window [class="Lxappearance"] floating enable

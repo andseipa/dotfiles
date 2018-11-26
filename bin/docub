@@ -1,0 +1,103 @@
+#!/bin/bash
+
+########################################
+#	Document creator script
+#
+#			by Andreas Seipajarvi 
+#				11/12-2016
+########################################
+
+DATE=`date +%d/%m-%Y`
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+clear
+
+# Declare subject to put document in
+
+echo -e "\e[37m========================================"
+echo -e "\t${bold}\e[36mSubject:${normal}\n\t1 - Historie\n\t2 - Norsk\n\t3 - Natur\n\t4 - Etc"
+echo -e "\e[37m----------------------------------------\n\e[00m"
+read fag;
+
+case $fag in
+	1) notesave=${NOTESDIR}historie;;
+	2) notesave=${NOTESDIR}norsk;;
+	3) notesave=${NOTESDIR}natur;;
+	4) notesave=${NOTESDIR}etc;;
+	*) echo -e "Invalid option."
+esac
+
+
+# List previous documents to avoid duplicate chapter nums
+notesavelist=$(ls $notesave | grep -i .md > /tmp/notelist.ls)
+notesavelatest=$(tail -n 5 /tmp/notelist.ls)
+
+function chapterlist {
+	clear
+	echo -e "\e[37m========================================"
+	echo -e "\t${bold}\e[36mChapter #:${normal}"
+	echo -e "\e[37m----------------------------------------"
+	echo -e "\t${bold}Current list:${normal}"
+	echo -e "\e[37m----------------------------------------"
+	echo -e "\e[39m$notesavelatest"
+	echo -e "\e[37m----------------------------------------\e[00m"
+	read kapn;
+}
+
+chapterlist
+
+# Enable user to extend list of notes
+case $kapn in
+	m|M) notesavelatest=$(tail -n 15 /tmp/notelist.ls) 
+		chapterlist;;
+	*) read kapn;
+esac
+
+# Convert single-digit to double-digit with leading zero
+kapn=$(printf "%02d" $kapn)
+
+clear
+
+# Get title for document
+echo -e "\e[37m========================================"
+echo -e "\t${bold}\e[36mTitle:${normal}"
+echo -e "\e[37m----------------------------------------\e[00m"
+read tittel;
+
+# Replace whitespace with dash
+titteldash=$(echo -e "$tittel" | tr -s ' ' | tr ' ' '-')
+# Make filename lowercase for navigation
+declare -l tittellcase=$titteldash
+
+# Template for document with date
+echo -e "% $tittel
+% av Andreas Seipäjärvi
+% $DATE
+
+- - -
+
+# 
+
+## Kort om kapittelet
+
+- 
+
+# Oppgaver
+
+# Notat
+
+## Forelesning --  " > $notesave/$kapn-$tittellcase.md
+
+clear
+# File is created; optional launch
+echo -e "\e[37m========================================"
+echo -e "\t${bold}\e[36mLaunch?${normal}"
+echo -e "\t\tY/n?"
+echo -e "\e[37m----------------------------------------\e[00m"
+read launch;
+
+case $launch in
+	yes|YES|Y|y ) nvim $notesave/$kapn-$tittellcase.md;;
+	*) exit;;
+esac

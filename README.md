@@ -18,3 +18,5 @@
 - [ ] Add required packages from Homebrew
 - [ ] Add missing dotfiles from home directory
 - [ ] Clean files of redundant comments and code
+- [ ] Make keys have the same purpose across applications, e.g. delete pane in tmux: x, delete window in nvim: d
+- [ ] Fix `.zshrc`

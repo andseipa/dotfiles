@@ -1,0 +1,150 @@
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+automatically-unhide-macos-hidden-apps = true
+
+[key-mapping]
+preset = 'qwerty'
+
+[gaps]
+inner.horizontal = 12
+inner.vertical =   12
+outer.left =       12
+outer.bottom =     12
+outer.top =        12
+outer.right =      12
+
+[mode.main.binding]
+
+ctrl-alt-z = 'layout tiles horizontal vertical'
+ctrl-alt-x = 'layout accordion horizontal vertical'
+
+cmd-left = 'focus left'
+cmd-down = 'focus down'
+cmd-up = 'focus up'
+cmd-right = 'focus right'
+
+cmd-shift-left = 'move left'
+cmd-shift-down = 'move down'
+cmd-shift-up = 'move up'
+cmd-shift-right = 'move right'
+
+cmd-ctrl-o = 'resize smart -50'
+cmd-ctrl-p = 'resize smart +50'
+
+cmd-ctrl-1 = 'workspace 1'
+cmd-ctrl-2 = 'workspace 2'
+cmd-ctrl-3 = 'workspace 3'
+cmd-ctrl-q = 'workspace q'
+cmd-ctrl-w = 'workspace w'
+cmd-ctrl-e = 'workspace e'
+cmd-ctrl-a = 'workspace a'
+cmd-ctrl-s = 'workspace s'
+cmd-ctrl-d = 'workspace d'
+
+cmd-ctrl-shift-1 = 'move-node-to-workspace 1'
+cmd-ctrl-shift-2 = 'move-node-to-workspace 2'
+cmd-ctrl-shift-3 = 'move-node-to-workspace 3'
+cmd-ctrl-shift-q = 'move-node-to-workspace q'
+cmd-ctrl-shift-w = 'move-node-to-workspace w'
+cmd-ctrl-shift-e = 'move-node-to-workspace e'
+cmd-ctrl-shift-a = 'move-node-to-workspace a'
+cmd-ctrl-shift-s = 'move-node-to-workspace s'
+cmd-ctrl-shift-d = 'move-node-to-workspace d'
+
+cmd-ctrl-tab = 'move-workspace-to-monitor --wrap-around next'
+
+cmd-ctrl-r = 'fullscreen'
+
+cmd-ctrl-shift-comma = 'mode service'
+
+cmd-ctrl-shift-z = 'mode resize'
+
+[mode.resize.binding]
+h = 'resize width -50'
+l = 'resize width +50'
+j = 'resize height -50'
+k = 'resize height +50'
+b = 'balance-sizes'
+
+p = 'resize smart +50'
+o = 'resize smart -50'
+
+enter = 'mode main'
+esc = 'mode main'
+
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
+f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+backspace = ['close-all-windows-but-current', 'mode main']
+
+cmd-left = ['join-with left', 'mode main']
+cmd-down = ['join-with down', 'mode main']
+cmd-up = ['join-with up', 'mode main']
+cmd-right = ['join-with right', 'mode main']
+
+# Declare workspace per application - replace with your own using `aerospace list-apps`.
+
+[[on-window-detected]]
+if.app-id = 'com.TickTick.task.mac'
+run = 'move-node-to-workspace 2' 
+
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = 'move-node-to-workspace s'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace d'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace s'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.tradingview.tradingviewapp.desktop'
+run = 'move-node-to-workspace e'
+
+
+# Declare float / tile per application - replace with your own.
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.isaacmarovitz.Whisky'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'NULL-APP-BUNDLE-ID'
+run = 'layout floating'
+
+# [workspace-to-monitor] doesn't work unfortunately.
+
+[workspace-to-monitor-force-assignment]
+# 1 = 1                            # Monitor sequence number from left to right. 1-based indexing
+# 2 = 'main'                       # Main monitor
+# 3 = 'secondary'                  # Non-main monitor in case when there are only two monitors
+# q = 'built-in'                   # Case insensitive regex substring
+# w = '^built-in retina display$'  # Case insensitive regex match
+# e = ['secondary', 'dell']        # You can specify multiple patterns. The first matching pattern will be used

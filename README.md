@@ -6,8 +6,9 @@
 
 ## Install instructions
 
-1. Add the following line in `/etc/zshenv`:
-   `export ZDOTDIR=$HOME/.config/zsh`
+1. ~~Add the following line in `/etc/zshenv`:
+   `export ZDOTDIR=$HOME/.config/zsh`~~
+   Use symlink instead: `ln -s ~/.dotfiles/.zshrc ~/.zshrc` due to compatibility issues oh-my-zsh.
 
 2. Rename `.env.example` to `.env` and replace the variables.
 

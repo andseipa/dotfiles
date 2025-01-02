@@ -8,6 +8,7 @@ keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.del("n", "<leader><tab>[")
 keymap.del("n", "<leader><tab>]")
+keymap.del("n", "<leader>wm")
 
 keymap.set("n", "<leader><tab>h", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 keymap.set("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
@@ -24,3 +25,6 @@ vim.keymap.set("n", "<A-Up>", "<cmd>m .-2<CR>==", { desc = "Move line up with Co
 vim.keymap.set("n", "<A-Down>", "<cmd>m .+1<CR>==", { desc = "Move line down with Command-Down" })
 vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move selection down with Command-Down" })
 vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up with Command-Up" })
+
+-- Snacks.toggle.zoom():map("<leader>wf"):map("<leader>uZ"):unmap("<leader>wm")
+Snacks.toggle.zoom():map("<leader>wf"):map("<leader>uZ")

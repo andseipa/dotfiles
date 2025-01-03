@@ -149,36 +149,6 @@
                         ]
                     },
                     {
-                        "description": "Swap ; and :",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": ["left_option"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "open_bracket" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "optional": ["caps_lock"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Left ctrl + hjkl to arrow keys Vim",
                         "manipulators": [
                             {

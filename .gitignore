@@ -5,6 +5,9 @@ nvim/*
 !nvim/lua/
 !nvim/lua/**
 
+thefuck/**
+!thefuck/settings.py
+
 .DS_Store
 zsh/.zsh_history
 zsh/.zsh_sessions

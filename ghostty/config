@@ -1880,9 +1880,15 @@ macos-titlebar-proxy-icon = visible
 # key, respectively.
 # 
 # This does not work with GLFW builds.
-macos-option-as-alt = false
-# macos-option-as-alt = false
 
+# WARNING: This has a tendency of messing up bindings through Karabiner Elements
+# 
+# We use right option as alt (meta), retain left option as native.
+# In Karabiner Elements I use left_option and left_command
+
+macos-option-as-alt = right
+
+#
 # Whether to enable the macOS window shadow. The default value is true.
 # With some window managers and window transparency settings, you may
 # find false more visually appealing.

@@ -1,10 +1,6 @@
 .env
 *.bak
 
-nvim/*
-!nvim/lua/
-!nvim/lua/**
-
 thefuck/**
 !thefuck/settings.py
 

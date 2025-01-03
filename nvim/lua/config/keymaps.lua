@@ -16,15 +16,18 @@ keymap.set("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 
 -- Move lines or selection up/down using Command + Arrow Keys
 -- Unmap existing bindings for Up and Down arrow keys
-vim.keymap.set("n", "<A-Up>", "<cmd>m .-2<CR>==", { desc = "Move line up with Command-Up" })
-vim.keymap.set("n", "<A-Down>", "<cmd>m .+1<CR>==", { desc = "Move line down with Command-Down" })
-vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move selection down with Command-Down" })
-vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up with Command-Up" })
+keymap.set("n", "<A-Up>", "<cmd>m .-2<CR>==", { desc = "Move line up with Command-Up" })
+keymap.set("n", "<A-Down>", "<cmd>m .+1<CR>==", { desc = "Move line down with Command-Down" })
+keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move selection down with Command-Down" })
+keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up with Command-Up" })
+
+keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
+keymap.set("n", "<leader>%", "<C-W>v", { desc = "Split Window Right", remap = true })
 
 -- Snacks.toggle.zoom():map("<leader>wf"):map("<leader>uZ"):unmap("<leader>wm")
 Snacks.toggle.zoom():map("<leader>wf"):map("<leader>uZ")

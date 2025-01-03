@@ -92,7 +92,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Swap O and P",
+                        "description": "Make squarebracket and curly bracers more accessible on nordic keyboard layout",
                         "manipulators": [
                             {
                                 "from": {
@@ -259,6 +259,16 @@
                             "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
                         }
                     ]
+                }
+            ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f3" },
+                    "to": [{ "apple_vendor_top_case_key_code": "illumination_down" }]
+                },
+                {
+                    "from": { "key_code": "f4" },
+                    "to": [{ "apple_vendor_top_case_key_code": "illumination_up" }]
                 }
             ],
             "name": "new default",

@@ -4,6 +4,9 @@
 thefuck/**
 !thefuck/settings.py
 
+nvim/lazy-lock.json
+nvim/lazyvim.json
+
 .DS_Store
 zsh/.zsh_history
 zsh/.zsh_sessions
@@ -11,6 +14,8 @@ zsh/.zcompdump*
 zsh/.zprofile
 zsh/.zshrc.off
 .z
+
+iterm2
 
 karabiner/assets
 karabiner/automatic_backups

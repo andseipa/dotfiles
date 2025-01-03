@@ -27,10 +27,7 @@ plugins=(git bun fzf)
 
 source $ZSH/oh-my-zsh.sh
 
-# WARNING: In case I get error
-#
-# export LANG=en_US.UTF-8
-export LANG=no_NB.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

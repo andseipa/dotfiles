@@ -4,7 +4,6 @@
 thefuck/**
 !thefuck/settings.py
 
-nvim/lazy-lock.json
 nvim/lazyvim.json
 
 .DS_Store

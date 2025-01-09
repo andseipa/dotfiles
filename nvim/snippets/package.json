@@ -1,0 +1,15 @@
+{
+  "name": "log-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./ts.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./ts.json"
+      }
+    ]
+  }
+}

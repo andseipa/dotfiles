@@ -9,7 +9,8 @@ return {
 		-- 	})
 		-- end,
 		opts = {
-			flavour = "macchiato",
+			flavour = "mocha",
+			-- flavour = "macchiato",
 			-- configurations
 		},
 	},

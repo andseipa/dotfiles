@@ -4,18 +4,29 @@
 --
 local opt = vim.opt
 
+-- vim.cmd("highlight Visual cterm=NONE gui=NONE")
 opt.smoothscroll = false
 opt.clipboard = ""
 opt.scrolloff = 7
-
 vim.g.snacks_animate = false
 
+-- Delay highlight command execution until after initialization
+vim.api.nvim_exec(
+	[[
+  augroup VisualModeHighlight
+    autocmd!
+    autocmd VimEnter * highlight Visual cterm=NONE gui=NONE
+  augroup END
+]],
+	false
+)
+
 if vim.fn.has("nvim-0.10") == 1 then
-  opt.smoothscroll = false
-  opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
-  opt.foldmethod = "expr"
-  opt.foldtext = ""
+	opt.smoothscroll = false
+	opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
+	opt.foldmethod = "expr"
+	opt.foldtext = ""
 else
-  opt.foldmethod = "indent"
-  opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
+	opt.foldmethod = "indent"
+	opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
 end

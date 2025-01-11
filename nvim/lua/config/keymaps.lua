@@ -10,6 +10,8 @@ keymap.del("n", "<leader><tab>[")
 keymap.del("n", "<leader><tab>]")
 -- keymap.del("n", "<leader>wm")
 
+keymap.set("n", "<leader>rn", ":IncRename ", { desc = "Incremental rename" })
+
 keymap.set("n", "<leader><tab>h", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 keymap.set("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 

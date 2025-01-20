@@ -6,8 +6,14 @@ local opt = vim.opt
 
 -- vim.cmd("highlight Visual cterm=NONE gui=NONE")
 opt.smoothscroll = false
-opt.clipboard = ""
+opt.clipboard:append("unnamedplus")
+
 opt.scrolloff = 7
+opt.autoindent = true
+opt.signcolumn = "yes"
+
+opt.swapfile = false
+
 vim.g.snacks_animate = false
 
 -- Delay highlight command execution until after initialization

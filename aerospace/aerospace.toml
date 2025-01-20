@@ -136,6 +136,16 @@ run = 'layout floating'
 if.app-id = 'NULL-APP-BUNDLE-ID'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = 'layout floating'
+
+
+[[on-window-detected]]
+if.app-id = 'com.IdeaPunch.ColorSlurp'
+run = 'layout floating'
+
+
 # [workspace-to-monitor] would be ideal, but doesn't work unfortunately.
 # [workspace-to-monitor-force-assignment] is too rigid. Doesn't allow to move windows from one monitor to the other.
 # 1 = 1                            # Monitor sequence number from left to right. 1-based indexing

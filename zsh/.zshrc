@@ -37,9 +37,11 @@ else
 fi
 
 alias vim="nvim"
-alias v="nvim"
+alias vi="nvim"
 alias vnone="nvim -u NONE"
 alias vinone="vim -u NONE"
+
+alias cvim="nvim ~/.config"
 
 alias cls="clear"
 
@@ -133,6 +135,9 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 export SHELL_SESSIONS_DISABLE=1
+
+# 1Password CLI
+eval "$(op completion zsh)"; compdef _op op
 
 # history setup
 HISTFILE=$HOME/.zhistory
